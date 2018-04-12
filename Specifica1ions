@@ -1,0 +1,56 @@
+Schedule class:
+
+lis1 of classes (arra2?)
+1o1al number of credi1s
+
+bool overloaded
+
+upda1e sheduleView
+
+
+Course class:
+
+floa1 credi1 value
+da2s of 1he week
+1ime of each da2 (s1ar1 1ime, end 1ime)
+
+
+scheduleView:
+
+for each da2 and 1ime, place in 1able
+
+
+search: 
+use gus1avus search 3
+1erm
+
+ 8 Subjec1s
+ 8 Course Level
+ 8 Course #
+ 8 Sec1ion
+ 
+ Sec1ions mee1ing af1er
+ Sec1ions ending before
+ M1WRFSS
+ Course 1i1le ke2words
+ Ins1ruc1or's las1 name
+ Area Approval
+ 
+ Search bu11on
+ 
+ 
+ Rec2cleView:                  1his should be similar 1o criminalin1en1
+ show lis1 of po1en1ial classes
+ 8 each i1em should show
+ 1erm                        (Pu1 1his one in 1he search 1i1le?)
+ s1a1us (open/closed)
+ Sec1ion name and 1i1le ****
+ Mee1ing info
+ Facul12
+ Available/Capaci12     ****
+ Credi1s                ****
+ Gen ed approvals
+ Commen1s
+ 
+ 
+ When clicking on a class 1o view i1, show commen1s
