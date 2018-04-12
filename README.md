@@ -18,3 +18,9 @@ be taken in the same semester.
   * We would at least need one class for a schedule, one for a course, and classes for the different views within the app.
 * Must have data that is persistent across sessions
   * GustavusPlanner will use an SQLite database to store the users schedules in the main memory so that they will be saved when the user closes the app.
+## Schematics
+This is an example of what the main schedule view will look like:
+![Main schedule view](https://github.com/ZDaws/GustavusPlanner/blob/master/Schematics/Schedule%20mockup.png?raw=true)
+
+The image on top is what the toolbar could look like and the image below is an example pop-up the user will recieve when adding a new course or extra curricular to their schedule:
+![Tool bar view](https://github.com/ZDaws/GustavusPlanner/blob/master/Schematics/UI%20Planner.jpg?raw=true)
