@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GustavusPlanner</string>
+    <string name="app_title">Gustavus Planner</string>
+    <string name="add_button">Add a Schedule</string>
 </resources>
