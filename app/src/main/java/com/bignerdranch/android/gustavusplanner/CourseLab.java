@@ -18,11 +18,11 @@ public class CourseLab {
         return sCourseLab;
     }
 
-    private ClassLab(Context context) {
+    private CourseLab(Context context) {
         mCourses = new ArrayList<>();
     }
 
-    public List<Class> getCourses(){
+    public List<Course> getCourses(){
         return mCourses;
     }
 
