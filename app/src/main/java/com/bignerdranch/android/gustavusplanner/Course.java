@@ -1,5 +1,7 @@
 package com.bignerdranch.android.gustavusplanner;
 
+import java.util.UUID;
+
 /**
  * Created by MaNgAkA fReAk on 4/24/2018.
  */
@@ -15,6 +17,8 @@ public class Course {
     private String Faculty;
     private String AreaApprovals;
 
+    private UUID mId;
+
     Course() {
         Name= "AAA-###-###"; // Full course name
         Synonym= 130734; // Synonym for the course. Should be 5 digits #####
@@ -24,6 +28,7 @@ public class Course {
         EndTime= "##:##AA";
         Faculty= "Professor Name";
         AreaApprovals= "Other Sections it counts as credit for";
+        mId= UUID.randomUUID();
     }
 
     Course(String name, int synonym, String shortTitle, String meetingDays, String startTime, String endTime, String faculty, String areaApprovals) {
@@ -35,6 +40,7 @@ public class Course {
         EndTime= endTime;
         Faculty= faculty;
         AreaApprovals= areaApprovals;
+        mId= UUID.randomUUID();
     }
 
 
@@ -103,4 +109,10 @@ public class Course {
     public void setAreaApprovals(String areaApprovals) {
         AreaApprovals = areaApprovals;
     }
+
+    public UUID getId() {
+        return mId;
+    }
+
+    
 }
