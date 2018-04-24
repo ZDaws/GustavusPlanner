@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Course Title"
+        />
+
+    <TextView
+        android:id="@+id/course_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        />
+
+    <TextView
+        android:id="@+id/course_synonym"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Synonym"
+        />
+
+    <TextView
+        android:id="@+id/course_short_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Short Title"
+        />
+
+    <TextView
+        android:id="@+id/course_meeting_days"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Meeting Days"
+        />
+
+    <TextView
+        android:id="@+id/course_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Time"
+        />
+
+    <TextView
+        android:id="@+id/course_end_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="End Time"
+        />
+
+    <TextView
+        android:id="@+id/course_faculty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Faculty"
+        />
+
+    <TextView
+        android:id="@+id/course_area_approvals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Area Approvals"
+        />
+
+    <Button
+        android:id="@+id/add_to_schedule"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Add Course to Schedule"
+        />
+
+</LinearLayout>

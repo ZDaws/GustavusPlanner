@@ -9,7 +9,7 @@ import java.util.UUID;
 public class Course {
 
     private String Name;
-    private int Synonym;
+    private String Synonym;
     private String ShortTitle;
     private String MeetingDays;
     private String StartTime;
@@ -21,7 +21,7 @@ public class Course {
 
     Course() {
         Name= "AAA-###-###"; // Full course name
-        Synonym= 130734; // Synonym for the course. Should be 5 digits #####
+        Synonym= "130734"; // Synonym for the course. Should be 5 digits #####
         ShortTitle= "Actual name of course";
         MeetingDays= "Days of week it meets on";
         StartTime= "##:##AA";
@@ -31,7 +31,7 @@ public class Course {
         mId= UUID.randomUUID();
     }
 
-    Course(String name, int synonym, String shortTitle, String meetingDays, String startTime, String endTime, String faculty, String areaApprovals) {
+    Course(String name, String synonym, String shortTitle, String meetingDays, String startTime, String endTime, String faculty, String areaApprovals) {
         Name= name; // Full course name
         Synonym= synonym; // Synonym for the course. Should be 5 digits #####
         ShortTitle= shortTitle;
@@ -54,11 +54,11 @@ public class Course {
         Name = name;
     }
 
-    public int getSynonym() {
+    public String getSynonym() {
         return Synonym;
     }
 
-    public void setSynonym(int synonym) {
+    public void setSynonym(String synonym) {
         Synonym = synonym;
     }
 
@@ -114,5 +114,5 @@ public class Course {
         return mId;
     }
 
-    
+
 }
