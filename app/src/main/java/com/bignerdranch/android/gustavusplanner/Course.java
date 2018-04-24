@@ -16,6 +16,7 @@ public class Course {
     private String EndTime;
     private String Faculty;
     private String AreaApprovals;
+
     private UUID mId;
 
     Course() {
@@ -108,4 +109,9 @@ public class Course {
     public void setAreaApprovals(String areaApprovals) {
         AreaApprovals = areaApprovals;
     }
+
+    public UUID getId() {
+        return mId;
+    }
+    
 }
