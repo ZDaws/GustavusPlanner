@@ -20,6 +20,11 @@ public class CourseLab {
 
     private CourseLab(Context context) {
         mCourses = new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            Course course = new Course();
+            course.setName("Schedule #" + i);
+            mCourses.add(course);
+        }
     }
 
     public List<Course> getCourses(){
