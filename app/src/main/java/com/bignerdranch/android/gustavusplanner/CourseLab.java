@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class CourseLab {
+
     private static CourseLab sCourseLab;
 
     private List<Course> mCourses;
@@ -20,11 +21,6 @@ public class CourseLab {
 
     private CourseLab(Context context) {
         mCourses = new ArrayList<>();
-        for (int i = 0; i < 100; i++) {
-            Course course = new Course();
-            course.setShortTitle("Course #" + i);
-            mCourses.add(course);
-        }
     }
 
     public List<Course> getCourses(){
