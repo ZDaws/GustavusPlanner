@@ -22,7 +22,7 @@ public class CourseLab {
         mCourses = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             Course course = new Course();
-            course.setName("Schedule #" + i);
+            course.setShortTitle("Course #" + i);
             mCourses.add(course);
         }
     }
@@ -38,5 +38,9 @@ public class CourseLab {
             }
         }
         return null;
+    }
+
+    public void addCourse(Course c) {
+        mCourses.add(c);
     }
 }

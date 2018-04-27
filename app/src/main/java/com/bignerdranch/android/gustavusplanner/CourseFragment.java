@@ -35,7 +35,7 @@ public class CourseFragment extends Fragment {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         UUID courseId = (UUID) getArguments().getSerializable(ARG_COURSE_ID);
