@@ -1,5 +1,6 @@
 package com.bignerdranch.android.gustavusplanner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -14,6 +17,7 @@ public class ScheduleListFragment extends Fragment {
 
     private RecyclerView mScheduleRecyclerView;
     private ScheduleAdapter mAdapter;
+    private TextView mTitleTextView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,9 +40,25 @@ public class ScheduleListFragment extends Fragment {
         mScheduleRecyclerView.setAdapter(mAdapter);
     }
 
-    private class ScheduleHolder extends RecyclerView.ViewHolder {
+    private class ScheduleHolder extends RecyclerView.ViewHolder
+        implements View.OnClickListener {
+
+        private Schedule mSchedule;
         public ScheduleHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.list_item_schedule, parent, false));
+            itemView.setOnClickListener(this);
+
+            mTitleTextView = (TextView) itemView.findViewById(R.id.schedule_title);
+        }
+        public void bind (Schedule schedule) {
+            mSchedule = schedule;
+            mTitleTextView.setText(mSchedule.getName());
+        }
+
+        @Override
+        public void onClick(View view) {
+            Intent intent = new Intent(getActivity(), CourseListActivity.class);
+            startActivity(intent);
         }
     }
 
@@ -59,7 +79,8 @@ public class ScheduleListFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(ScheduleHolder holder, int position) {
-
+            Schedule schedule = mSchedules.get(position);
+            holder.bind(schedule);
         }
 
         @Override
