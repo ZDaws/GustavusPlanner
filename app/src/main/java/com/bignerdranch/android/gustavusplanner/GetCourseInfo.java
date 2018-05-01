@@ -1,7 +1,6 @@
 package com.bignerdranch.android.gustavusplanner;
 
 import android.os.AsyncTask;
-import android.util.Log;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -12,17 +11,19 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.ArrayList;
 
 import javax.net.ssl.HttpsURLConnection;
 
-public class GetCourseInfo extends AsyncTask<String, Void, Void>{
+public class GetCourseInfo extends AsyncTask<String, Void, ArrayList<ArrayList<String>>>{
 
     @Override
-    protected Void doInBackground(String... urls) {
+    protected ArrayList<ArrayList<String>> doInBackground(String... urls) {
         //Get the course data from the list of fall courses on WebAdvisor
 
         String input;
         String output = "";
+        ArrayList<ArrayList<String>> courses = new ArrayList<>();
 
         try {
             URL url = new URL(urls[0]);
@@ -47,19 +48,13 @@ public class GetCourseInfo extends AsyncTask<String, Void, Void>{
         for(int i = 1; i < rows.size(); i++) {
             Element row = rows.get(i);
             Elements cols = row.select("td");
-            String name = cols.get(0).text();
-            String synonym = cols.get(1).text();
-            String shortTitle = cols.get(2).text();
-            String meetingDays = cols.get(3).text();
-            String startTime = cols.get(4).text();
-            String endTime = cols.get(5).text();
-            String faculty = cols.get(6).text();
-            String areaApprovals = cols.get(7).text();
-            String test = name+" "+synonym+" "+shortTitle+" "+meetingDays+" "+startTime+" "+
-                    endTime+" "+faculty+" "+areaApprovals;
-            Log.d("TESTING QUERY", test);
+            ArrayList<String> courseInfo = new ArrayList<>();
+            for(int j = 0; j < cols.size(); j++) {
+                courseInfo.add(cols.get(j).text());
+            }
+            courses.add(courseInfo);
         }
-        return null;
+        return courses;
     }
 
 
