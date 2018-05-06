@@ -1,5 +1,6 @@
 package com.bignerdranch.android.gustavusplanner;
 
+import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -52,6 +53,20 @@ public class ScheduleListFragment extends Fragment {
         inflater.inflate(R.menu.menu_schedule_list, menu);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.add_schedule:
+                Schedule schedule = new Schedule();
+                ScheduleLab.get(getActivity()).addSchedule(schedule);
+                Intent intent = new Intent(getActivity(), CourseListActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
     private void updateUI() {
         ScheduleLab scheduleLab = ScheduleLab.get(getActivity());
         List<Schedule> schedules = scheduleLab.getSchedules();
@@ -65,16 +80,18 @@ public class ScheduleListFragment extends Fragment {
     }
 
     private class ScheduleHolder extends RecyclerView.ViewHolder
-        implements View.OnClickListener {
+            implements View.OnClickListener {
 
         private Schedule mSchedule;
+
         public ScheduleHolder(LayoutInflater inflater, ViewGroup parent) {
             super(inflater.inflate(R.layout.list_item_schedule, parent, false));
             itemView.setOnClickListener(this);
 
             mTitleTextView = (TextView) itemView.findViewById(R.id.schedule_title);
         }
-        public void bind (Schedule schedule) {
+
+        public void bind(Schedule schedule) {
             mSchedule = schedule;
             mTitleTextView.setText(mSchedule.getName());
         }
