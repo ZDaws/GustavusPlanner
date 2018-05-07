@@ -1,11 +1,17 @@
 package com.bignerdranch.android.gustavusplanner;
 
+import android.app.SearchManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -19,6 +25,12 @@ public class CourseListFragment extends Fragment {
     private TextView mTitleTextView;
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_schedule_list, container, false);
@@ -29,6 +41,23 @@ public class CourseListFragment extends Fragment {
         updateUI();
 
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_course_list, menu);
+
+        // Get the SearchView and set the searchable configuration
+        SearchManager searchManager = (SearchManager) getActivity().getSystemService(Context.SEARCH_SERVICE);
+        SearchView searchView = (SearchView) menu.findItem(R.id.search_courses).getActionView();
+        // Assumes current activity is the searchable activity
+        ComponentName componentName = new ComponentName(getContext(),
+                "com.bignerdranch.android.gustavusplanner.CourseSearchActivity");
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(
+                componentName
+        ));
+
     }
 
     private void updateUI() {
