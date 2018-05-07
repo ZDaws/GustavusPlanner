@@ -62,7 +62,7 @@ public class CourseSearchActivity extends AppCompatActivity {
                             CourseSearchActivity.this,
                             "Clicked on course "+clickedCourse.toString(),
                             Toast.LENGTH_LONG
-                    );
+                    ).show();
 
                 }
             });
