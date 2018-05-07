@@ -18,15 +18,16 @@ import javax.net.ssl.HttpsURLConnection;
 public class GetCourseInfo extends AsyncTask<String, Void, ArrayList<ArrayList<String>>>{
 
     @Override
-    protected ArrayList<ArrayList<String>> doInBackground(String... urls) {
+    protected ArrayList<ArrayList<String>> doInBackground(String... queries) {
         //Get the course data from the list of fall courses on WebAdvisor
 
         String input;
         String output = "";
+        String query = queries[0];
         ArrayList<ArrayList<String>> courses = new ArrayList<>();
 
         try {
-            URL url = new URL(urls[0]);
+            URL url = new URL("https://gustavus.edu/registrar/webadvisor/mstrfall.html");
             HttpsURLConnection con = (HttpsURLConnection)url.openConnection();
 
             BufferedReader br =
@@ -49,10 +50,17 @@ public class GetCourseInfo extends AsyncTask<String, Void, ArrayList<ArrayList<S
             Element row = rows.get(i);
             Elements cols = row.select("td");
             ArrayList<String> courseInfo = new ArrayList<>();
+            Boolean containsQuery = false;
             for(int j = 0; j < cols.size(); j++) {
-                courseInfo.add(cols.get(j).text());
+                String courseAttribute = cols.get(j).text();
+                if(courseAttribute.contains(query)) {
+                    containsQuery = true;
+                }
+                courseInfo.add(courseAttribute);
             }
-            courses.add(courseInfo);
+            if (containsQuery) {
+                courses.add(courseInfo);
+            }
         }
         return courses;
     }
