@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
@@ -55,14 +54,13 @@ public class CourseSearchActivity extends AppCompatActivity {
                     ArrayList<String> clickedCourse = courses.get(i);
                     // We will add this in the future to start the view where we can see the course
                     // info and add it. For now I made it a toast so we can see how it works
-                    /*Intent intent = new Intent(getApplicationContext(), CourseActivity.class)
-                            .putStringArrayListExtra("course", clickedCourse);
-                    startActivity(intent);*/
-                    Toast.makeText(
+                    Intent intent = CourseActivity.newIntent(getApplicationContext(),clickedCourse);
+                    startActivity(intent);
+                    /*Toast.makeText(
                             CourseSearchActivity.this,
                             "Clicked on course "+clickedCourse.toString(),
                             Toast.LENGTH_LONG
-                    ).show();
+                    ).show();*/
 
                 }
             });

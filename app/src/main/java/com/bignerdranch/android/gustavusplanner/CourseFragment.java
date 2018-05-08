@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.UUID;
+import java.util.ArrayList;
 
 /**
  * Created by MaNgAkA fReAk on 4/26/2018.
@@ -29,12 +29,12 @@ public class CourseFragment extends Fragment {
 
     private Course mCourse;
 
-    private static final String ARG_COURSE_ID = "Course ID";
+    private static final String ARG_COURSE_INFO = "course_info";
 
 
-    public static CourseFragment newInstance(UUID courseId) {
+    public static CourseFragment newInstance(ArrayList<String> course) {
         Bundle args = new Bundle();
-        args.putSerializable(ARG_COURSE_ID, courseId);
+        args.putStringArrayList(ARG_COURSE_INFO, course);
 
         CourseFragment fragment = new CourseFragment();
         fragment.setArguments(args);
@@ -46,8 +46,16 @@ public class CourseFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        UUID courseId = (UUID) getArguments().getSerializable(ARG_COURSE_ID);
-        mCourse = CourseLab.get(getActivity()).getCourse(courseId);
+        ArrayList<String> course = (ArrayList<String>) getArguments().getStringArrayList(ARG_COURSE_INFO);
+        mCourse = new Course(
+                course.get(0),
+                course.get(1),
+                course.get(2),
+                course.get(3),
+                course.get(4),
+                course.get(5),
+                course.get(6),
+                course.get(7));
     }
 
     @Override
@@ -85,6 +93,7 @@ public class CourseFragment extends Fragment {
             public void onClick(View view) {
 
                 //Add to schedule code here
+                //Add mCourse to the schedule lab or something like that
 
             }
         });
