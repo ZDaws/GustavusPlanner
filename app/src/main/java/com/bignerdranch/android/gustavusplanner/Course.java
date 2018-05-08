@@ -19,7 +19,7 @@ public class Course {
 
     private UUID mId;
 
-    Course() {
+    public Course() {
         Name= "AAA-###-###"; // Full course name
         Synonym= "130734"; // Synonym for the course. Should be 5 digits #####
         ShortTitle= "Actual name of course";
