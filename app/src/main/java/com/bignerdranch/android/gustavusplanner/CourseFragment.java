@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.UUID;
 
@@ -16,6 +17,15 @@ import java.util.UUID;
 public class CourseFragment extends Fragment {
 
     private Button AddCourseToSchedule;
+    private TextView courseName;
+    private TextView courseSynonym;
+    private TextView courseShortTitle;
+    private TextView courseMeetingDays;
+    private TextView courseStartTime;
+    private TextView courseEndTime;
+    private TextView courseFaculty;
+    private TextView courseAreaApprovals;
+
 
     private Course mCourse;
 
@@ -43,6 +53,30 @@ public class CourseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v= inflater.inflate(R.layout.course_fragment, container, false);
+
+        courseName = (TextView) v.findViewById(R.id.course_name);
+        courseName.setText(mCourse.getName());
+
+        courseSynonym = (TextView) v.findViewById(R.id.course_synonym);
+        courseSynonym.setText(mCourse.getSynonym());
+
+        courseShortTitle = (TextView) v.findViewById(R.id.course_short_title);
+        courseShortTitle.setText(mCourse.getShortTitle());
+
+        courseMeetingDays = (TextView) v.findViewById(R.id.course_meeting_days);
+        courseMeetingDays.setText(mCourse.getMeetingDays());
+
+        courseStartTime = (TextView) v.findViewById(R.id.course_start_time);
+        courseStartTime.setText(mCourse.getStartTime());
+
+        courseEndTime = (TextView) v.findViewById(R.id.course_end_time);
+        courseEndTime.setText(mCourse.getEndTime());
+
+        courseFaculty = (TextView) v.findViewById(R.id.course_faculty);
+        courseFaculty.setText(mCourse.getFaculty());
+
+        courseAreaApprovals = (TextView) v.findViewById(R.id.course_area_approvals);
+        courseAreaApprovals.setText(mCourse.getAreaApprovals());
 
         AddCourseToSchedule= (Button) v.findViewById(R.id.add_to_schedule);
         AddCourseToSchedule.setText("Add "+mCourse.getShortTitle()+" to schedule.");
