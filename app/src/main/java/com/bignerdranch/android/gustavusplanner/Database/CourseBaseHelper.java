@@ -20,7 +20,7 @@ public class CourseBaseHelper extends SQLiteOpenHelper{
                 CourseDbSchema.CourseTable.Cols.SHORT_TITLE + ", " +
                 CourseDbSchema.CourseTable.Cols.MEETING_DAYS + ", " +
                 CourseDbSchema.CourseTable.Cols.START_TIME + ", " +
-                CourseDbSchema.CourseTable.Cols.END_TIME + ", " +
+                CourseDbSchema.CourseTable.Cols.ENDING_TIME + ", " +
                 CourseDbSchema.CourseTable.Cols.FACULTY + ", " +
                 CourseDbSchema.CourseTable.Cols.AREA_APPROVALS + ", " +
                 CourseDbSchema.CourseTable.Cols.UUID +

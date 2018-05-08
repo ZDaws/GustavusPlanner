@@ -6,12 +6,12 @@ public class CourseDbSchema {
 
         public static final class Cols {
             public static final String SYNONYM = "synonym";
-            public static final String SHORT_TITLE = "short title";
-            public static final String MEETING_DAYS = "meeting days";
-            public static final String START_TIME = "start time";
-            public static final String END_TIME = "end time";
+            public static final String SHORT_TITLE = "short_title";
+            public static final String MEETING_DAYS = "meeting_days";
+            public static final String START_TIME = "start_time";
+            public static final String ENDING_TIME = "end_time";
             public static final String FACULTY = "faculty";
-            public static final String AREA_APPROVALS = "area approvals";
+            public static final String AREA_APPROVALS = "area_approvals";
             public static final String UUID = "uuid";
         }
     }
