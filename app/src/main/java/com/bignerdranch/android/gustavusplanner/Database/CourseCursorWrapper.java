@@ -18,12 +18,12 @@ public class CourseCursorWrapper extends CursorWrapper {
         String shortTitle = getString(getColumnIndex(CourseTable.Cols.SHORT_TITLE));
         String meetingDays = getString(getColumnIndex(CourseTable.Cols.MEETING_DAYS));
         String startTime = getString(getColumnIndex(CourseTable.Cols.START_TIME));
-        String endTime = getString(getColumnIndex(CourseTable.Cols.END_TIME));
+        String endTime = getString(getColumnIndex(CourseTable.Cols.ENDING_TIME));
         String faculty = getString(getColumnIndex(CourseTable.Cols.FACULTY));
         String approvals = getString(getColumnIndex(CourseTable.Cols.AREA_APPROVALS));
         String uuidString = getString(getColumnIndex(CourseTable.Cols.UUID));
 
-        Course course = new Course();
+        Course course = new Course(UUID.fromString(uuidString));
         course.setSynonym(synonym);
         course.setShortTitle(shortTitle);
         course.setMeetingDays(meetingDays);

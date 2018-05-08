@@ -31,6 +31,11 @@ public class Course {
         mId= UUID.randomUUID();
     }
 
+    //If unneeded, delete later
+    public Course (UUID id) {
+        mId = id;
+    }
+
     Course(String name, String synonym, String shortTitle, String meetingDays, String startTime, String endTime, String faculty, String areaApprovals) {
         Name= name; // Full course name
         Synonym= synonym; // Synonym for the course. Should be 5 digits #####
@@ -113,6 +118,5 @@ public class Course {
     public UUID getId() {
         return mId;
     }
-
 
 }
