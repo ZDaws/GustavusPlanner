@@ -5,74 +5,191 @@
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <TextView
-        style="?android:listSeparatorTextViewStyle"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Course Title"
-        />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/course_name"
+            />
+        <TextView
+            android:id="@+id/course_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/course_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name"
-        />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/course_synonym"
+            />
+        <TextView
+            android:id="@+id/course_synonym"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/course_synonym"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Synonym"
-        />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/course_short_title"
+            />
+        <TextView
+            android:id="@+id/course_short_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/course_short_title"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Short Title"
-        />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/course_meeting_days"
+            />
+        <TextView
+            android:id="@+id/course_meeting_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/course_meeting_days"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Meeting Days"
-        />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/course_start_time"
+            />
+        <TextView
+            android:id="@+id/course_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/course_start_time"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start Time"
-        />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/course_end_time"
+            />
+        <TextView
+            android:id="@+id/course_end_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/course_end_time"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="End Time"
-        />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/course_faculty"
+            />
+        <TextView
+            android:id="@+id/course_faculty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/course_faculty"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Faculty"
-        />
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/course_area_approvals"
+            />
+        <TextView
+            android:id="@+id/course_area_approvals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/course_area_approvals"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Area Approvals"
-        />
-
-    <Button
-        android:id="@+id/add_to_schedule"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:text="Add Course to Schedule"
-        />
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <Button
+            android:id="@+id/add_to_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_schedule_button" />
+    </LinearLayout>
 
 </LinearLayout>
