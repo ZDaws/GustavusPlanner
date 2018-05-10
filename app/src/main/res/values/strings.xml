@@ -2,7 +2,16 @@
     <string name="app_name">GustavusPlanner</string>
     <string name="app_title">Gustavus Planner</string>
     <string name="new_schedule">New Schedule</string>
-    <string name="add_button">Add a Schedule</string>
+    <string name="add_schedule_button">Add a Schedule</string>
+    <string name="add_course_button">Add Course to Schedule</string>
     <string name="delete_button">Delete a Schedule</string>
     <string name="search_hint">Search courses</string>
+    <string name="course_name">Name:</string>
+    <string name="course_synonym">Synonym:</string>
+    <string name="course_short_title">Short Title:</string>
+    <string name="course_meeting_days">Meeting Days:</string>
+    <string name="course_start_time">Start Time:</string>
+    <string name="course_end_time">End Time:</string>
+    <string name="course_faculty">Faculty:</string>
+    <string name="course_area_approvals">Synonym:</string>
 </resources>

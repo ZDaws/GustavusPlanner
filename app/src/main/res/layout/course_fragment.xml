@@ -15,16 +15,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Name:"
+            android:textSize="20sp"
+            android:text="@string/course_name"
             />
         <TextView
             android:id="@+id/course_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Name"
+            android:textSize="20sp"
             />
     </LinearLayout>
 
@@ -38,16 +37,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Synonym:"
+            android:textSize="20sp"
+            android:text="@string/course_synonym"
             />
         <TextView
             android:id="@+id/course_synonym"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Synonym"
+            android:textSize="20sp"
             />
     </LinearLayout>
 
@@ -61,16 +59,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Short Title:"
+            android:textSize="20sp"
+            android:text="@string/course_short_title"
             />
         <TextView
             android:id="@+id/course_short_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Short Title"
+            android:textSize="20sp"
             />
     </LinearLayout>
 
@@ -84,16 +81,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Meeting Days:"
+            android:textSize="20sp"
+            android:text="@string/course_meeting_days"
             />
         <TextView
             android:id="@+id/course_meeting_days"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Meeting Days"
+            android:textSize="20sp"
             />
     </LinearLayout>
 
@@ -107,16 +103,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Start Time:"
+            android:textSize="20sp"
+            android:text="@string/course_start_time"
             />
         <TextView
             android:id="@+id/course_start_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Start Time"
+            android:textSize="20sp"
             />
     </LinearLayout>
 
@@ -130,16 +125,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="End Time:"
+            android:textSize="20sp"
+            android:text="@string/course_end_time"
             />
         <TextView
             android:id="@+id/course_end_time"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="End Time"
+            android:textSize="20sp"
             />
     </LinearLayout>
 
@@ -153,16 +147,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Faculty:"
+            android:textSize="20sp"
+            android:text="@string/course_faculty"
             />
         <TextView
             android:id="@+id/course_faculty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Faculty"
+            android:textSize="20sp"
             />
     </LinearLayout>
 
@@ -176,16 +169,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Area Approvals:"
+            android:textSize="20sp"
+            android:text="@string/course_area_approvals"
             />
         <TextView
             android:id="@+id/course_area_approvals"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="20dp"
-            android:text="Area Approvals"
+            android:textSize="20sp"
             />
     </LinearLayout>
 
@@ -197,7 +189,7 @@
             android:id="@+id/add_to_schedule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Course to Schedule" />
+            android:text="@string/add_schedule_button" />
     </LinearLayout>
 
 </LinearLayout>
