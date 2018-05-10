@@ -18,9 +18,9 @@ public class ScheduleBaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + ScheduleDbSchema.ScheduleTable.NAME + "(" +
                 " _id integer primary key autoincrement, " +
-                ScheduleDbSchema.ScheduleTable.Cols.UUID + ", " +
-                ScheduleDbSchema.ScheduleTable.Cols.TITLE + ", " +
-                ScheduleDbSchema.ScheduleTable.Cols.DATE +
+                ScheduleTable.Cols.UUID + ", " +
+                ScheduleTable.Cols.TITLE + ", " +
+                ScheduleTable.Cols.DATE +
                 ")"
         );
     }
