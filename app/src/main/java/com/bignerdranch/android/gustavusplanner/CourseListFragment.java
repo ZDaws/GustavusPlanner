@@ -33,7 +33,7 @@ public class CourseListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_schedule_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_course_list, container, false);
 
         mCourseRecyclerView = (RecyclerView) view.findViewById(R.id.schedule_recycler_view);
         mCourseRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -116,6 +116,95 @@ public class CourseListFragment extends Fragment {
         public int getItemCount() {
             return mCourses.size();
         }
+    }
+
+
+
+    private int calculatePosition(String StartTime) { //Figure out where the class should show up on the schedule, in dp
+        int position=0;
+        String hour="";
+        String minute="";
+        char AM_PM;
+
+        int i=0;
+        while (StartTime.charAt(i) != ':') {
+            hour=hour+StartTime.charAt(0);
+            i++;
+        }
+        i++;
+        while(StartTime.charAt(i)!='A' && StartTime.charAt(i)!='P') {
+            minute=minute+StartTime.charAt(i);
+            i++;
+        }
+        AM_PM=StartTime.charAt(i);
+
+        if(AM_PM=='A' || hour=="12") {
+            position=30*(Integer.parseInt(hour) - 8) + (Integer.parseInt(minute)/2); // 8:00AM=0dp 9:00AM=30dp 10:00AM=60dp 11:AM=90dp 12:00PM=120dp
+        }
+        else {
+            position=30*(Integer.parseInt(hour) + 4) + (Integer.parseInt(minute)/2); // 1:00PM=150dp 11:00PM=450dp
+        }
+
+        return position;
+    }
+
+    private int calculateLengthOfCourse(String StartTime, String EndTime) { //Figure out how the height of a course, in dp
+        int height=0;
+
+        String hourStartString="";
+        int hourStart=0;
+        String minuteStart="";
+        char AM_PM_Start;
+
+        String hourEndString="";
+        int hourEnd=0;
+        String minuteEnd="";
+        char AM_PM_End;
+
+        int timeStart=0;
+        int timeEnd=0;
+
+        int i=0;
+        while (StartTime.charAt(i) != ':') {
+            hourStartString=hourStartString+StartTime.charAt(0);
+            i++;
+        }
+        i++;
+        while(StartTime.charAt(i)!='A' && StartTime.charAt(i)!='P') {
+            minuteStart=minuteStart+StartTime.charAt(i);
+            i++;
+        }
+        AM_PM_Start=StartTime.charAt(i);
+        if(AM_PM_Start=='A' || hourStartString=="12") {
+            hourStart= Integer.parseInt(hourStartString);
+        }
+        else {
+            hourStart= Integer.parseInt(hourStartString) + 12;
+        }
+        timeStart=60*hourStart + Integer.parseInt(minuteStart);
+
+        i=0;
+        while (EndTime.charAt(i) != ':') {
+            hourEndString=hourEndString+EndTime.charAt(0);
+            i++;
+        }
+        i++;
+        while(EndTime.charAt(i)!='A' && EndTime.charAt(i)!='P') {
+            minuteEnd=minuteEnd+EndTime.charAt(i);
+            i++;
+        }
+        AM_PM_End=EndTime.charAt(i);
+        if(AM_PM_End=='A' || hourEndString=="12") {
+            hourEnd= Integer.parseInt(hourEndString);
+        }
+        else {
+            hourEnd= Integer.parseInt(hourEndString) + 12;
+        }
+        timeEnd=60*hourEnd + Integer.parseInt(minuteEnd);
+
+        height=timeEnd-timeStart;
+
+        return height;
     }
 
 }
