@@ -189,7 +189,7 @@
             android:id="@+id/add_to_schedule"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/add_schedule_button" />
+            android:text="@string/add_course_button" />
     </LinearLayout>
 
 </LinearLayout>
