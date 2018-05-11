@@ -13,5 +13,5 @@
     <string name="course_start_time">Start Time:</string>
     <string name="course_end_time">End Time:</string>
     <string name="course_faculty">Faculty:</string>
-    <string name="course_area_approvals">Synonym:</string>
+    <string name="course_area_approvals">Area Approvals:</string>
 </resources>
