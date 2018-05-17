@@ -1,6 +1,8 @@
 package com.bignerdranch.android.gustavusplanner;
 
 import android.app.ListActivity;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,14 +15,18 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.app.AlertDialog;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ScheduleListFragment extends Fragment {
 
+    //final Context context = this;
+    private String result;
     private RecyclerView mScheduleRecyclerView;
     private ScheduleAdapter mAdapter;
     private TextView mTitleTextView;
@@ -56,11 +62,46 @@ public class ScheduleListFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.add_schedule:
-                Schedule schedule = new Schedule();
-                ScheduleLab.get(getActivity()).addSchedule(schedule);
-                Intent intent = new Intent(getActivity(), CourseListActivity.class);
-                startActivity(intent);
-                return true;
+                LayoutInflater li = LayoutInflater.from(getContext());
+                View promptsView = li.inflate(R.layout.schedule_name_prompt, null);
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
+                alertDialogBuilder.setView(promptsView);
+
+                final EditText userInput = (EditText) promptsView.findViewById(R.id.editTextDialogUserInput);
+
+                // set dialog message
+                alertDialogBuilder
+                        .setCancelable(false)
+                        .setPositiveButton("OK",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        // get user input and set it to result
+                                        // edit text
+
+                                        Schedule schedule = new Schedule();
+                                        ScheduleLab.get(getActivity()).addSchedule(schedule);
+                                        Intent intent = new Intent(getActivity(), CourseListActivity.class);
+                                        startActivity(intent);
+
+                                        //result.setText(userInput.getText());
+                                        result = userInput.getText().toString();
+                                        schedule.setName(result);
+                                    }
+                                })
+                        .setNegativeButton("Cancel",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+
+                // show it
+                alertDialog.show();
+
             default:
                 return super.onOptionsItemSelected(item);
         }
