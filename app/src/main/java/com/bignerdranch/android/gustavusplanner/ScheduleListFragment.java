@@ -1,7 +1,6 @@
 package com.bignerdranch.android.gustavusplanner;
 
-import android.app.ListActivity;
-import android.content.Context;
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,9 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.app.AlertDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +26,8 @@ public class ScheduleListFragment extends Fragment {
     private String result;
     private RecyclerView mScheduleRecyclerView;
     private ScheduleAdapter mAdapter;
-    private TextView mTitleTextView;
+    private TextView mScheduleTitleTextView;
+    private TextView mScheduleDateTextView;
     private MenuInflater inflater;
     private ArrayList toDelete = new ArrayList<>();
 
@@ -50,6 +48,12 @@ public class ScheduleListFragment extends Fragment {
         updateUI();
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateUI();
     }
 
     @Override
@@ -78,15 +82,12 @@ public class ScheduleListFragment extends Fragment {
                                     public void onClick(DialogInterface dialog, int id) {
                                         // get user input and set it to result
                                         // edit text
-
                                         Schedule schedule = new Schedule();
+                                        result = userInput.getText().toString();
+                                        schedule.setName(result);
                                         ScheduleLab.get(getActivity()).addSchedule(schedule);
                                         Intent intent = new Intent(getActivity(), CourseListActivity.class);
                                         startActivity(intent);
-
-                                        //result.setText(userInput.getText());
-                                        result = userInput.getText().toString();
-                                        schedule.setName(result);
                                     }
                                 })
                         .setNegativeButton("Cancel",
@@ -128,12 +129,14 @@ public class ScheduleListFragment extends Fragment {
             super(inflater.inflate(R.layout.list_item_schedule, parent, false));
             itemView.setOnClickListener(this);
 
-            mTitleTextView = (TextView) itemView.findViewById(R.id.schedule_title);
+            mScheduleTitleTextView = (TextView) itemView.findViewById(R.id.schedule_title);
+            mScheduleDateTextView = (TextView) itemView.findViewById(R.id.schedule_date);
         }
 
         public void bind(Schedule schedule) {
             mSchedule = schedule;
-            mTitleTextView.setText(mSchedule.getName());
+            mScheduleTitleTextView.setText(mSchedule.getName());
+            mScheduleDateTextView.setText(mSchedule.getDate().toString());
         }
 
         @Override
