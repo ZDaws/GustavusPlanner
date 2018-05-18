@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.view.ActionMode;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.format.DateFormat;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -136,7 +137,8 @@ public class ScheduleListFragment extends Fragment {
         public void bind(Schedule schedule) {
             mSchedule = schedule;
             mScheduleTitleTextView.setText(mSchedule.getName());
-            mScheduleDateTextView.setText(mSchedule.getDate().toString());
+            mScheduleDateTextView.setText(DateFormat.format("EEEE, MMM d, yyyy",
+                    mSchedule.getDate()));
         }
 
         @Override

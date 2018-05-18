@@ -9,12 +9,16 @@
         android:id="@+id/schedule_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="2.5dp"
+        android:textSize="18sp"
         android:text="Schedule Title"/>
 
     <TextView
         android:id="@+id/schedule_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="2.5dp"
+        android:textSize="18sp"
         android:text="Schedule Date"/>
 
 </LinearLayout>
