@@ -107,7 +107,7 @@ public class ScheduleLab {
         ContentValues values = new ContentValues();
         values.put(ScheduleTable.Cols.UUID, schedule.getId().toString());
         values.put(ScheduleTable.Cols.TITLE, schedule.getName());
-        values.put(ScheduleTable.Cols.DATE, schedule.getDate().toString());
+        values.put(ScheduleTable.Cols.DATE, schedule.getDate().getTime());
         return values;
     }
 }

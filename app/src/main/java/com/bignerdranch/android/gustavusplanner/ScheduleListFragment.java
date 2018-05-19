@@ -87,7 +87,8 @@ public class ScheduleListFragment extends Fragment {
                                         result = userInput.getText().toString();
                                         schedule.setName(result);
                                         ScheduleLab.get(getActivity()).addSchedule(schedule);
-                                        Intent intent = new Intent(getActivity(), CourseListActivity.class);
+                                        Intent intent = CourseListActivity
+                                                .newIntent(getActivity(), schedule.getId());
                                         startActivity(intent);
                                     }
                                 })
@@ -113,8 +114,13 @@ public class ScheduleListFragment extends Fragment {
         ScheduleLab scheduleLab = ScheduleLab.get(getActivity());
         List<Schedule> schedules = scheduleLab.getSchedules();
 
-        mAdapter = new ScheduleAdapter(schedules);
-        mScheduleRecyclerView.setAdapter(mAdapter);
+        if (mAdapter == null) {
+            mAdapter = new ScheduleAdapter(schedules);
+            mScheduleRecyclerView.setAdapter(mAdapter);
+        } else {
+            mAdapter.setSchedules(schedules);
+            mAdapter.notifyDataSetChanged();
+        }
     }
 
     public MenuInflater getMenuInflater() {
@@ -143,7 +149,8 @@ public class ScheduleListFragment extends Fragment {
 
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(getActivity(), CourseListActivity.class);
+            Intent intent = CourseListActivity
+                    .newIntent(getActivity(), mSchedule.getId());
             startActivity(intent);
         }
     }
@@ -172,6 +179,10 @@ public class ScheduleListFragment extends Fragment {
         @Override
         public int getItemCount() {
             return mSchedules.size();
+        }
+
+        public void setSchedules(List<Schedule> schedules) {
+            mSchedules = schedules;
         }
 
         public boolean onActionItemClicked(ActionMode actionMode, MenuItem menuItem) {

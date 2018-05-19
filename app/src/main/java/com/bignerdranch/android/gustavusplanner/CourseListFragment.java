@@ -12,23 +12,28 @@ import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.UUID;
 
 public class CourseListFragment extends Fragment {
 
     private RecyclerView mCourseRecyclerView;
     private CourseAdapter mAdapter;
     private TextView mTitleTextView;
+    private Schedule mSchedule;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
+        UUID scheduleId = (UUID) getActivity().getIntent()
+                .getSerializableExtra(CourseListActivity.EXTRA_SCHEDULE_ID);
+        mSchedule = ScheduleLab.get(getActivity()).getSchedule(scheduleId);
     }
 
     @Override
@@ -61,12 +66,41 @@ public class CourseListFragment extends Fragment {
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_delete:
+                ScheduleLab.get(getContext()).deleteSchedule(mSchedule);
+                getActivity().finish();
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        ScheduleLab.get(getActivity()).updateSchedule(mSchedule);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        updateUI();
+    }
+
     private void updateUI() {
         CourseLab courseLab = CourseLab.get(getActivity());
         List<Course> courses = courseLab.getCourses();
 
-        mAdapter = new CourseAdapter(courses);
-        mCourseRecyclerView.setAdapter(mAdapter);
+        if (mAdapter == null) {
+            mAdapter = new CourseAdapter(courses);
+            mCourseRecyclerView.setAdapter(mAdapter);
+        } else {
+            mAdapter.setCourses(courses);
+            mAdapter.notifyDataSetChanged();
+        }
     }
 
     private class CourseHolder extends RecyclerView.ViewHolder
@@ -116,6 +150,10 @@ public class CourseListFragment extends Fragment {
         @Override
         public int getItemCount() {
             return mCourses.size();
+        }
+
+        public void setCourses(List<Course> courses) {
+            mCourses = courses;
         }
     }
 
