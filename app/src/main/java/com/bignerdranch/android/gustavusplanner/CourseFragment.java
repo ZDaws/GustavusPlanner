@@ -7,8 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
+import java.util.UUID;
 
 /**
  * Created by MaNgAkA fReAk on 4/26/2018.
@@ -28,13 +29,16 @@ public class CourseFragment extends Fragment {
 
 
     private Course mCourse;
+    private Schedule mSchedule;
 
-    private static final String ARG_COURSE_INFO = "course_info";
+    private static final String ARG_COURSE_ID = "course_id";
+    private static final String ARG_SCHEDULE_ID = "schedule_id";
 
 
-    public static CourseFragment newInstance(ArrayList<String> course) {
+    public static CourseFragment newInstance(UUID courseId, UUID scheduleId) {
         Bundle args = new Bundle();
-        args.putStringArrayList(ARG_COURSE_INFO, course);
+        args.putSerializable(ARG_COURSE_ID, courseId);
+        args.putSerializable(ARG_SCHEDULE_ID, scheduleId);
 
         CourseFragment fragment = new CourseFragment();
         fragment.setArguments(args);
@@ -46,16 +50,11 @@ public class CourseFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        ArrayList<String> course = (ArrayList<String>) getArguments().getStringArrayList(ARG_COURSE_INFO);
-        mCourse = new Course(
-                course.get(0),
-                course.get(1),
-                course.get(2),
-                course.get(3),
-                course.get(4),
-                course.get(5),
-                course.get(6),
-                course.get(7));
+        UUID courseId = (UUID) getArguments().getSerializable(ARG_COURSE_ID);
+        mCourse = CourseLab.get(getContext()).getCourse(courseId);
+
+        UUID scheduleId = (UUID) getArguments().getSerializable(ARG_SCHEDULE_ID);
+        mSchedule = ScheduleLab.get(getContext()).getSchedule(scheduleId);
     }
 
     @Override
@@ -91,13 +90,15 @@ public class CourseFragment extends Fragment {
         AddCourseToSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //Add to schedule code here
-                //Add mCourse to the schedule lab or something like that
-
+                Toast.makeText(getContext(),
+                        "Course: "+mCourse.getShortTitle()+" Schedule: "+ mSchedule.getName(),
+                        Toast.LENGTH_LONG).show();
+                getActivity().finish();
             }
         });
 
         return  v;
     }
+
+
 }

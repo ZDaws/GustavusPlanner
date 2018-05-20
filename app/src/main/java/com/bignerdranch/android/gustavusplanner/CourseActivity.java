@@ -4,22 +4,24 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
-import java.util.ArrayList;
+import java.util.UUID;
 
 public class CourseActivity extends SingleFragmentActivity {
 
-    private static final String EXTRA_COURSE_INFO = "com.bignerdranch.android.gustavusplanner.course_info";
+    private static final String EXTRA_COURSE_ID = "com.bignerdranch.android.gustavusplanner.course_id";
+    private static final String EXTRA_SCHEDULE_ID = "com.bignerdranch.android.gustavusplanner.schedule_id";
 
-    public static Intent newIntent(Context packageContext, ArrayList<String> course) {
+    public static Intent newIntent(Context packageContext, UUID courseId, UUID scheduleId) {
         Intent intent = new Intent(packageContext, CourseActivity.class);
-        intent.putStringArrayListExtra(EXTRA_COURSE_INFO, course);
+        intent.putExtra(EXTRA_COURSE_ID, courseId);
+        intent.putExtra(EXTRA_SCHEDULE_ID, scheduleId);
         return intent;
     }
 
     @Override
     protected Fragment createFragment() {
-        ArrayList<String> courseInfo = (ArrayList<String>) getIntent()
-                .getStringArrayListExtra(EXTRA_COURSE_INFO);
-        return CourseFragment.newInstance(courseInfo);
+        UUID courseId = (UUID) getIntent().getSerializableExtra(EXTRA_COURSE_ID);
+        UUID scheduleId = (UUID) getIntent().getSerializableExtra(EXTRA_SCHEDULE_ID);
+        return CourseFragment.newInstance(courseId, scheduleId);
     }
 }

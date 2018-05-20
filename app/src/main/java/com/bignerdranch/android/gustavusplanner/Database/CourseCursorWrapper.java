@@ -14,6 +14,7 @@ public class CourseCursorWrapper extends CursorWrapper {
     }
 
     public Course getCourse() {
+        String name = getString(getColumnIndex(CourseTable.Cols.TITLE));
         String synonym = getString(getColumnIndex(CourseTable.Cols.SYNONYM));
         String shortTitle = getString(getColumnIndex(CourseTable.Cols.SHORT_TITLE));
         String meetingDays = getString(getColumnIndex(CourseTable.Cols.MEETING_DAYS));
@@ -24,6 +25,7 @@ public class CourseCursorWrapper extends CursorWrapper {
         String uuidString = getString(getColumnIndex(CourseTable.Cols.UUID));
 
         Course course = new Course(UUID.fromString(uuidString));
+        course.setName(name);
         course.setSynonym(synonym);
         course.setShortTitle(shortTitle);
         course.setMeetingDays(meetingDays);

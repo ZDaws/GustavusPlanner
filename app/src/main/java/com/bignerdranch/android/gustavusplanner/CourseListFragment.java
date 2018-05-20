@@ -15,7 +15,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import java.util.List;
 import java.util.UUID;
@@ -24,8 +23,9 @@ public class CourseListFragment extends Fragment {
 
     private RecyclerView mCourseRecyclerView;
     private CourseAdapter mAdapter;
-    private TextView mTitleTextView;
     private Schedule mSchedule;
+
+    private static final String EXTRA_SCHEDULE_ID = "com.bignerdranch.android.gustavusplanner.schedule_id";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -64,6 +64,28 @@ public class CourseListFragment extends Fragment {
                 componentName
         ));
 
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent searchIntent = new Intent(getContext(), CourseSearchActivity.class);
+                searchIntent.putExtra(SearchManager.QUERY, query);
+
+                Bundle appData = new Bundle();
+                appData.putSerializable(EXTRA_SCHEDULE_ID, mSchedule.getId()); // put extra data to Bundle
+                searchIntent.putExtra(SearchManager.APP_DATA, appData); // pass the search context data
+                searchIntent.setAction(Intent.ACTION_SEARCH);
+
+                startActivity(searchIntent);
+
+                return true; // we start the search activity manually
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
     }
 
     @Override
@@ -80,7 +102,6 @@ public class CourseListFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-
         ScheduleLab.get(getActivity()).updateSchedule(mSchedule);
     }
 
@@ -115,12 +136,11 @@ public class CourseListFragment extends Fragment {
 
         public void bind (Course course) {
             mCourse = course;
-            mTitleTextView.setText(mCourse.getName());
         }
 
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(getActivity(), CourseFragment.class);
+            Intent intent = CourseActivity.newIntent(getActivity(), mCourse.getId(), mSchedule.getId());
             startActivity(intent);
         }
     }

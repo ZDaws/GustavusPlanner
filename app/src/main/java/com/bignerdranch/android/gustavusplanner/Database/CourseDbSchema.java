@@ -2,9 +2,10 @@ package com.bignerdranch.android.gustavusplanner.Database;
 
 public class CourseDbSchema {
     public static final class CourseTable {
-        public static final String NAME = "name";
+        public static final String NAME = "courses";
 
         public static final class Cols {
+            public static final String TITLE = "name";
             public static final String SYNONYM = "synonym";
             public static final String SHORT_TITLE = "short_title";
             public static final String MEETING_DAYS = "meeting_days";
