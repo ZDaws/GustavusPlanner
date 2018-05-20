@@ -1,8 +1,12 @@
 package com.bignerdranch.android.gustavusplanner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -49,6 +53,7 @@ public class CourseFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
 
         UUID courseId = (UUID) getArguments().getSerializable(ARG_COURSE_ID);
         mCourse = CourseLab.get(getContext()).getCourse(courseId);
@@ -90,15 +95,38 @@ public class CourseFragment extends Fragment {
         AddCourseToSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(),
-                        "Course: "+mCourse.getShortTitle()+" Schedule: "+ mSchedule.getName(),
-                        Toast.LENGTH_LONG).show();
-                getActivity().finish();
+                //CourseLab.get(getContext()).addCourse(mCourse);
+                Intent intent = CourseListActivity.newIntent(getContext(), mSchedule.getId());
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); //makes it so you can't go back to search screen after
+                startActivity(intent);
             }
         });
 
         return  v;
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_course, menu);
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.delete_course:
+                CourseLab courseLab = CourseLab.get(getContext());
+                if (courseLab.getCourse(mCourse.getId()) != null) {
+                    courseLab.deleteCourse(mCourse);
+                    getActivity().finish();
+                } else {
+                    //currently doesn't work due to fact that the course is always added
+                    Toast.makeText(getActivity(),
+                            "You can't delete a course that you haven't added",
+                            Toast.LENGTH_SHORT).show();
+                }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }
