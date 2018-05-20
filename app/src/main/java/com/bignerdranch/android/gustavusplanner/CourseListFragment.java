@@ -15,6 +15,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import java.util.List;
 import java.util.UUID;
@@ -24,6 +25,10 @@ public class CourseListFragment extends Fragment {
     private RecyclerView mCourseRecyclerView;
     private CourseAdapter mAdapter;
     private Schedule mSchedule;
+    private TextView mCourseShortTitleTextView;
+    private TextView mCourseStartTimeTextView;
+    private TextView mCourseNameTextView;
+    private TextView mCourseEndTimeTextView;
 
     private static final String EXTRA_SCHEDULE_ID = "com.bignerdranch.android.gustavusplanner.schedule_id";
 
@@ -41,7 +46,7 @@ public class CourseListFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_course_list, container, false);
 
-        mCourseRecyclerView = (RecyclerView) view.findViewById(R.id.schedule_recycler_view);
+        mCourseRecyclerView = (RecyclerView) view.findViewById(R.id.course_recycler_view);
         mCourseRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         updateUI();
@@ -129,13 +134,22 @@ public class CourseListFragment extends Fragment {
 
         private Course mCourse;
         public CourseHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.list_item_schedule, parent, false));
+            super(inflater.inflate(R.layout.list_item_course, parent, false));
             itemView.setOnClickListener(this);
+
+            mCourseShortTitleTextView = (TextView) itemView.findViewById(R.id.course_list_item_short_title);
+            mCourseStartTimeTextView = (TextView) itemView.findViewById(R.id.course_list_item_start_time);
+            mCourseNameTextView = (TextView) itemView.findViewById(R.id.course_list_item_name);
+            mCourseEndTimeTextView = (TextView) itemView.findViewById(R.id.course_list_item_end_time);
 
         }
 
         public void bind (Course course) {
             mCourse = course;
+            mCourseShortTitleTextView.setText(mCourse.getShortTitle());
+            mCourseStartTimeTextView.setText(mCourse.getStartTime());
+            mCourseNameTextView.setText(mCourse.getName());
+            mCourseEndTimeTextView.setText(mCourse.getEndTime());
         }
 
         @Override
