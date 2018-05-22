@@ -1,5 +1,7 @@
 package com.bignerdranch.android.gustavusplanner;
 
+import android.graphics.Color;
+
 import java.util.Random;
 import java.util.UUID;
 
@@ -22,10 +24,10 @@ public class Course {
 
 
     //These are for the table in CourseListFragment
-    private String positionInTable; //Top location of course box
-    private int heightInTable; //height of course box
-    private String courseColor="#130734";
-    private String textColor="#130734";
+    private String positionInTable= ""; //Top location of course box
+    private int heightInTable= 0; //height of course box
+    private static int courseColor= 130734;
+    private static int textColor= 130734;
 
 
 
@@ -138,23 +140,23 @@ public class Course {
         return heightInTable;
     }
 
-    public String getCourseColor() {
+    public int getCourseColor() {
         return courseColor;
     }
 
-    public void setCourseColor(String courseColor) {
+    public void setCourseColor(int courseColor) {
         this.courseColor = courseColor;
     }
 
-    public String getTextColor() {
+    public int getTextColor() {
         return textColor;
     }
 
-    public void setTextColor(String textColor) {
+    public void setTextColor(int textColor) {
         this.textColor = textColor;
     }
 
-    private void calculateTableBox() { //Figure out where the class should show up on the schedule, in dp
+    public void calculateTableBox() { //Figure out where the class should show up on the schedule, in dp
         String hourStartString="";
         int hourStart=0;
         String minuteStartString="";
@@ -183,11 +185,11 @@ public class Course {
 
         if(AM_PM_Start=='A' || hourStartString=="12") {
             position=30*(Integer.parseInt(hourStartString) - 8) + (Integer.parseInt(minuteStartString)/2); // 8:00AM=0dp 9:00AM=30dp 10:00AM=60dp 11:AM=90dp 12:00PM=120dp
-            hourEnd= Integer.parseInt(hourEndString);
+            hourStart= Integer.parseInt(hourStartString);
         }
         else {
             position=30*(Integer.parseInt(hourStartString) + 4) + (Integer.parseInt(minuteStartString)/2); // 1:00PM=150dp 11:00PM=450dp
-            hourEnd= Integer.parseInt(hourEndString) + 12;
+            hourStart= Integer.parseInt(hourStartString) + 12;
         }
         timeStart=60*hourStart + Integer.parseInt(minuteStartString);
 
@@ -215,11 +217,19 @@ public class Course {
         positionInTable=Integer.toString(position);
         heightInTable=timeEnd-timeStart;
 
-        Long color= new Random().nextLong();       //Assign random color to course
-        courseColor= Long.toHexString(color);
-        color= Long.getLong(courseColor);
-        Long invertedColor = ~color;              //Assign inverted color to text
-        textColor= Long.toHexString(invertedColor);
+        int color= new Random().nextInt();       //Assign random color to course
+        courseColor= color;
+        String courseColorHex= Integer.toHexString(courseColor);
+        color = (int)Long.parseLong(courseColorHex, 16);
+        int r = (color >> 16) & 0xFF;
+        int g = (color >> 8) & 0xFF;
+        int b = (color >> 0) & 0xFF;
+        int invertedRed = 255 - r;
+        int invertedGreen = 255 - g;
+        int invertedBlue = 255 - b;
+
+        textColor = Color.rgb(invertedRed, invertedGreen, invertedBlue);
+                   //Assign inverted color to text
     }
 
 }

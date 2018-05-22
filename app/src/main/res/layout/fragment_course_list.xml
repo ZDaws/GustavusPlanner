@@ -358,7 +358,117 @@
                             <View
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
-                                android:background="#aaa" />
+                                android:background="#aaa"/>
+
+                            <Button
+                                android:id="@+id/monday_course_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="0dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/monday_course_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="30dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/monday_course_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="75dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/monday_course_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="105dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/monday_course_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="135dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/monday_course_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="165dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/monday_course_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="195dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/monday_course_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="225dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/monday_course_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="255dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/monday_course_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="285dp"
+                                android:visibility="gone"/>
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -371,6 +481,116 @@
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
                                 android:background="#aaa" />
+
+                            <Button
+                                android:id="@+id/tuesday_course_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="0dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/tuesday_course_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="30dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/tuesday_course_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="75dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/tuesday_course_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="105dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/tuesday_course_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="135dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/tuesday_course_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="165dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/tuesday_course_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="195dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/tuesday_course_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="225dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/tuesday_course_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="255dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/tuesday_course_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="285dp"
+                                android:visibility="gone"/>
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -384,6 +604,116 @@
                                 android:layout_height="match_parent"
 
                                 android:background="#aaa" />
+
+                            <Button
+                                android:id="@+id/wednesday_course_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="0dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/wednesday_course_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="30dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/wednesday_course_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="75dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/wednesday_course_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="105dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/wednesday_course_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="135dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/wednesday_course_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="165dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/wednesday_course_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="195dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/wednesday_course_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="225dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/wednesday_course_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="255dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/wednesday_course_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="285dp"
+                                android:visibility="gone"/>
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -396,6 +726,116 @@
                                 android:layout_width="1dp"
                                 android:layout_height="match_parent"
                                 android:background="#aaa" />
+
+                            <Button
+                                android:id="@+id/thursday_course_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="0dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/thursday_course_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="30dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/thursday_course_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="75dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/thursday_course_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="105dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/thursday_course_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="135dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/thursday_course_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="165dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/thursday_course_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="195dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/thursday_course_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="225dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/thursday_course_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="255dp"
+                                android:visibility="gone"/>
+
+                            <Button
+                                android:id="@+id/thursday_course_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:background="#130734"
+                                android:text="Short Name"
+                                android:textSize="10dp"
+                                android:textColor="#ffffff"
+                                android:layout_marginTop="285dp"
+                                android:visibility="gone"/>
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -410,6 +850,7 @@
                                 android:background="#aaa" />
 
                             <Button
+                                android:id="@+id/friday_course_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -417,9 +858,10 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="0dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                             <Button
+                                android:id="@+id/friday_course_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -427,9 +869,10 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="30dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                             <Button
+                                android:id="@+id/friday_course_3"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -437,9 +880,10 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="75dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                             <Button
+                                android:id="@+id/friday_course_4"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -447,9 +891,10 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="105dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                             <Button
+                                android:id="@+id/friday_course_5"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -457,9 +902,10 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="135dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                             <Button
+                                android:id="@+id/friday_course_6"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -467,9 +913,10 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="165dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                             <Button
+                                android:id="@+id/friday_course_7"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -477,9 +924,10 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="195dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                             <Button
+                                android:id="@+id/friday_course_8"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -487,9 +935,10 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="225dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                             <Button
+                                android:id="@+id/friday_course_9"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -497,9 +946,10 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="255dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                             <Button
+                                android:id="@+id/friday_course_10"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
                                 android:background="#130734"
@@ -507,7 +957,7 @@
                                 android:textSize="10dp"
                                 android:textColor="#ffffff"
                                 android:layout_marginTop="285dp"
-                                android:visibility="visible"/>
+                                android:visibility="gone"/>
 
                         </RelativeLayout>
                     </LinearLayout>
