@@ -103,79 +103,85 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="90dp"
+                android:layout_marginTop="75dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="120dp"
+                android:layout_marginTop="105dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="135dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="180dp"
+                android:layout_marginTop="165dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="210sp"
+                android:layout_marginTop="195sp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="240dp"
+                android:layout_marginTop="225dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="270dp"
+                android:layout_marginTop="255dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="300dp"
+                android:layout_marginTop="285dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="330dp"
+                android:layout_marginTop="315dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="360dp"
+                android:layout_marginTop="345dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="390dp"
+                android:layout_marginTop="375dp"
                 android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="420dp"
+                android:layout_marginTop="405dp"
                 android:background="#777" />
+
+            <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="435dp"
+            android:background="#777" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="450dp"
+                android:layout_marginTop="465dp"
                 android:background="#777" />
 
             <LinearLayout
@@ -197,7 +203,7 @@
                         android:layout_height="30dp"
                         android:layout_marginTop="0dp"
                         android:gravity="center"
-                        android:text="8am"
+                        android:text="8:00"
                         android:textColor="#000" />
 
                     <TextView
@@ -206,133 +212,141 @@
                         android:layout_height="30dp"
                         android:layout_marginTop="30dp"
                         android:gravity="center"
-                        android:text="9am"
+                        android:text="9:00"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="60dp"
+                        android:gravity="center"
+                        android:text=""
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView10am"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginTop="75dp"
                         android:gravity="center"
-                        android:text="10am"
+                        android:text="10:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView11am"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="90dp"
+                        android:layout_marginTop="105dp"
                         android:gravity="center"
-                        android:text="11am"
+                        android:text="11:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView12pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="120dp"
+                        android:layout_marginTop="135dp"
                         android:gravity="center"
-                        android:text="12pm"
+                        android:text="12:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView1pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="150dp"
+                        android:layout_marginTop="165dp"
                         android:gravity="center"
-                        android:text="1pm"
+                        android:text="1:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView2pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="180dp"
+                        android:layout_marginTop="195dp"
                         android:gravity="center"
-                        android:text="2pm"
+                        android:text="2:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView3pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="210sp"
+                        android:layout_marginTop="225sp"
                         android:gravity="center"
-                        android:text="3pm"
+                        android:text="3:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView4pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="240dp"
+                        android:layout_marginTop="255dp"
                         android:gravity="center"
-                        android:text="4pm"
+                        android:text="4:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView5pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="270dp"
+                        android:layout_marginTop="285dp"
                         android:gravity="center"
-                        android:text="5pm"
+                        android:text="5:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView6pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="300dp"
+                        android:layout_marginTop="315dp"
                         android:gravity="center"
-                        android:text="6pm"
+                        android:text="6:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView7pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="330dp"
+                        android:layout_marginTop="345dp"
                         android:gravity="center"
-                        android:text="7pm"
+                        android:text="7:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView8pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="360dp"
+                        android:layout_marginTop="375dp"
                         android:gravity="center"
-                        android:text="8pm"
+                        android:text="8:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView9pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="390dp"
+                        android:layout_marginTop="405dp"
                         android:gravity="center"
-                        android:text="9pm"
+                        android:text="9:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView10pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="420dp"
+                        android:layout_marginTop="435dp"
                         android:gravity="center"
-                        android:text="10pm"
+                        android:text="10:30"
                         android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/textView11pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="450dp"
+                        android:layout_marginTop="465dp"
                         android:gravity="center"
-                        android:text="11pm"
+                        android:text="11:30"
                         android:textColor="#000" />
                 </RelativeLayout>
 
