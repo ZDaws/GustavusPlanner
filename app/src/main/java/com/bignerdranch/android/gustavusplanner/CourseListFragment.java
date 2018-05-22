@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -231,6 +230,7 @@ public class CourseListFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+        CourseCount= 0;
         updateUI();
     }
 
@@ -270,9 +270,7 @@ public class CourseListFragment extends Fragment {
             mCourseEndTimeTextView.setText(mCourse.getEndTime());
 
 
-            if(course.getCourseColor()== 130734) {
-                course.calculateTableBox();
-            }
+            course.calculateTableBox();
 
             boolean M= false;
             boolean T= false;
@@ -300,36 +298,30 @@ public class CourseListFragment extends Fragment {
 
             CourseCount++;
             if(CourseCount==1) {
-                /*if(M) {
+                if(M) {
                     mMondayCourse1.setText(course.getShortTitle());
-                    mMondayCourse1.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse1.setTextColor(course.getTextColor());
+                    //mMondayCourse1.setBackgroundColor(course.getCourseColor());
+                    //mMondayCourse1.setTextColor(course.getTextColor());
                     mMondayCourse1.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse1.setHeight(course.getHeightInTable());
                     mMondayCourse1.setVisibility(View.VISIBLE);
-                } */
+                }
                 if(F) {
                     mFridayCourse1.setText(course.getShortTitle());
-                    mFridayCourse1.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse1.setTextColor(course.getTextColor());
                     mFridayCourse1.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse1.setHeight(course.getHeightInTable());
                     mFridayCourse1.setVisibility(View.VISIBLE);
                 }
-            } /*
+            }
             else if(CourseCount==2) {
                 if(M) {
                     mMondayCourse2.setText(course.getShortTitle());
-                    mMondayCourse2.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse2.setTextColor(course.getTextColor());
                     mMondayCourse2.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse2.setHeight(course.getHeightInTable());
                     mMondayCourse2.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse2.setText(course.getShortTitle());
-                    mFridayCourse2.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse2.setTextColor(course.getTextColor());
                     mFridayCourse2.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse2.setHeight(course.getHeightInTable());
                     mFridayCourse2.setVisibility(View.VISIBLE);
@@ -338,16 +330,12 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==3) {
                 if(M) {
                     mMondayCourse3.setText(course.getShortTitle());
-                    mMondayCourse3.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse3.setTextColor(course.getTextColor());
                     mMondayCourse3.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse3.setHeight(course.getHeightInTable());
                     mMondayCourse3.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse3.setText(course.getShortTitle());
-                    mFridayCourse3.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse3.setTextColor(course.getTextColor());
                     mFridayCourse3.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse3.setHeight(course.getHeightInTable());
                     mFridayCourse3.setVisibility(View.VISIBLE);
@@ -356,16 +344,12 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==4) {
                 if(M) {
                     mMondayCourse4.setText(course.getShortTitle());
-                    mMondayCourse4.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse4.setTextColor(course.getTextColor());
                     mMondayCourse4.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse4.setHeight(course.getHeightInTable());
                     mMondayCourse4.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse4.setText(course.getShortTitle());
-                    mFridayCourse4.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse4.setTextColor(course.getTextColor());
                     mFridayCourse4.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse4.setHeight(course.getHeightInTable());
                     mFridayCourse4.setVisibility(View.VISIBLE);
@@ -374,16 +358,12 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==5) {
                 if(M) {
                     mMondayCourse5.setText(course.getShortTitle());
-                    mMondayCourse5.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse5.setTextColor(course.getTextColor());
                     mMondayCourse5.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse5.setHeight(course.getHeightInTable());
                     mMondayCourse5.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse5.setText(course.getShortTitle());
-                    mFridayCourse5.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse5.setTextColor(course.getTextColor());
                     mFridayCourse5.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse5.setHeight(course.getHeightInTable());
                     mFridayCourse5.setVisibility(View.VISIBLE);
@@ -392,16 +372,12 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==6) {
                 if(M) {
                     mMondayCourse6.setText(course.getShortTitle());
-                    mMondayCourse6.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse6.setTextColor(course.getTextColor());
                     mMondayCourse6.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse6.setHeight(course.getHeightInTable());
                     mMondayCourse6.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse6.setText(course.getShortTitle());
-                    mFridayCourse6.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse6.setTextColor(course.getTextColor());
                     mFridayCourse6.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse6.setHeight(course.getHeightInTable());
                     mFridayCourse6.setVisibility(View.VISIBLE);
@@ -410,16 +386,12 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==7) {
                 if(M) {
                     mMondayCourse7.setText(course.getShortTitle());
-                    mMondayCourse7.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse7.setTextColor(course.getTextColor());
                     mMondayCourse7.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse7.setHeight(course.getHeightInTable());
                     mMondayCourse7.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse7.setText(course.getShortTitle());
-                    mFridayCourse7.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse7.setTextColor(course.getTextColor());
                     mFridayCourse7.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse7.setHeight(course.getHeightInTable());
                     mFridayCourse7.setVisibility(View.VISIBLE);
@@ -428,16 +400,12 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==8) {
                 if(M) {
                     mMondayCourse8.setText(course.getShortTitle());
-                    mMondayCourse8.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse8.setTextColor(course.getTextColor());
                     mMondayCourse8.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse8.setHeight(course.getHeightInTable());
                     mMondayCourse8.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse8.setText(course.getShortTitle());
-                    mFridayCourse8.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse8.setTextColor(course.getTextColor());
                     mFridayCourse8.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse8.setHeight(course.getHeightInTable());
                     mFridayCourse8.setVisibility(View.VISIBLE);
@@ -446,16 +414,12 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==9) {
                 if(M) {
                     mMondayCourse9.setText(course.getShortTitle());
-                    mMondayCourse9.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse9.setTextColor(course.getTextColor());
                     mMondayCourse9.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse9.setHeight(course.getHeightInTable());
                     mMondayCourse9.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse9.setText(course.getShortTitle());
-                    mFridayCourse9.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse9.setTextColor(course.getTextColor());
                     mFridayCourse9.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse9.setHeight(course.getHeightInTable());
                     mFridayCourse9.setVisibility(View.VISIBLE);
@@ -464,21 +428,17 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==10) {
                 if(M) {
                     mMondayCourse10.setText(course.getShortTitle());
-                    mMondayCourse10.setBackgroundColor(course.getCourseColor());
-                    mMondayCourse10.setTextColor(course.getTextColor());
                     mMondayCourse10.setTop(Integer.valueOf(course.getPositionInTable()));
                     mMondayCourse10.setHeight(course.getHeightInTable());
                     mMondayCourse10.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse10.setText(course.getShortTitle());
-                    mFridayCourse10.setBackgroundColor(course.getCourseColor());
-                    mFridayCourse10.setTextColor(course.getTextColor());
                     mFridayCourse10.setTop(Integer.valueOf(course.getPositionInTable()));
                     mFridayCourse10.setHeight(course.getHeightInTable());
                     mFridayCourse10.setVisibility(View.VISIBLE);
                 }
-            } */
+            }
 
         }
 

@@ -127,7 +127,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="210dp"
+                android:layout_marginTop="210sp"
                 android:background="#777" />
 
             <View
@@ -258,7 +258,7 @@
                         android:id="@+id/textView3pm"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:layout_marginTop="210dp"
+                        android:layout_marginTop="210sp"
                         android:gravity="center"
                         android:text="3pm"
                         android:textColor="#000" />
@@ -364,10 +364,10 @@
                                 android:id="@+id/monday_course_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_1_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_1_text_color"
                                 android:layout_marginTop="0dp"
                                 android:visibility="gone"/>
 
@@ -375,10 +375,10 @@
                                 android:id="@+id/monday_course_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_2_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_2_text_color"
                                 android:layout_marginTop="30dp"
                                 android:visibility="gone"/>
 
@@ -386,10 +386,10 @@
                                 android:id="@+id/monday_course_3"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_3_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_3_text_color"
                                 android:layout_marginTop="75dp"
                                 android:visibility="gone"/>
 
@@ -397,10 +397,10 @@
                                 android:id="@+id/monday_course_4"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_4_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_4_text_color"
                                 android:layout_marginTop="105dp"
                                 android:visibility="gone"/>
 
@@ -408,10 +408,10 @@
                                 android:id="@+id/monday_course_5"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_5_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_5_text_color"
                                 android:layout_marginTop="135dp"
                                 android:visibility="gone"/>
 
@@ -419,10 +419,10 @@
                                 android:id="@+id/monday_course_6"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_6_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_6_text_color"
                                 android:layout_marginTop="165dp"
                                 android:visibility="gone"/>
 
@@ -430,10 +430,10 @@
                                 android:id="@+id/monday_course_7"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_7_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_7_text_color"
                                 android:layout_marginTop="195dp"
                                 android:visibility="gone"/>
 
@@ -441,10 +441,10 @@
                                 android:id="@+id/monday_course_8"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_8_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_8_text_color"
                                 android:layout_marginTop="225dp"
                                 android:visibility="gone"/>
 
@@ -452,10 +452,10 @@
                                 android:id="@+id/monday_course_9"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_9_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_9_text_color"
                                 android:layout_marginTop="255dp"
                                 android:visibility="gone"/>
 
@@ -463,10 +463,10 @@
                                 android:id="@+id/monday_course_10"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_10_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_10_text_color"
                                 android:layout_marginTop="285dp"
                                 android:visibility="gone"/>
                         </RelativeLayout>
@@ -486,10 +486,10 @@
                                 android:id="@+id/tuesday_course_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_1_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_1_text_color"
                                 android:layout_marginTop="0dp"
                                 android:visibility="gone"/>
 
@@ -497,10 +497,10 @@
                                 android:id="@+id/tuesday_course_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_2_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_2_text_color"
                                 android:layout_marginTop="30dp"
                                 android:visibility="gone"/>
 
@@ -508,10 +508,10 @@
                                 android:id="@+id/tuesday_course_3"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_3_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_3_text_color"
                                 android:layout_marginTop="75dp"
                                 android:visibility="gone"/>
 
@@ -519,10 +519,10 @@
                                 android:id="@+id/tuesday_course_4"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_4_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_4_text_color"
                                 android:layout_marginTop="105dp"
                                 android:visibility="gone"/>
 
@@ -530,10 +530,10 @@
                                 android:id="@+id/tuesday_course_5"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_5_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_5_text_color"
                                 android:layout_marginTop="135dp"
                                 android:visibility="gone"/>
 
@@ -541,10 +541,10 @@
                                 android:id="@+id/tuesday_course_6"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_6_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_6_text_color"
                                 android:layout_marginTop="165dp"
                                 android:visibility="gone"/>
 
@@ -552,10 +552,10 @@
                                 android:id="@+id/tuesday_course_7"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_7_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_7_text_color"
                                 android:layout_marginTop="195dp"
                                 android:visibility="gone"/>
 
@@ -563,10 +563,10 @@
                                 android:id="@+id/tuesday_course_8"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_8_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_8_text_color"
                                 android:layout_marginTop="225dp"
                                 android:visibility="gone"/>
 
@@ -574,10 +574,10 @@
                                 android:id="@+id/tuesday_course_9"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_9_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_9_text_color"
                                 android:layout_marginTop="255dp"
                                 android:visibility="gone"/>
 
@@ -585,10 +585,10 @@
                                 android:id="@+id/tuesday_course_10"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_10_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_10_text_color"
                                 android:layout_marginTop="285dp"
                                 android:visibility="gone"/>
                         </RelativeLayout>
@@ -609,10 +609,10 @@
                                 android:id="@+id/wednesday_course_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_1_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_1_text_color"
                                 android:layout_marginTop="0dp"
                                 android:visibility="gone"/>
 
@@ -620,10 +620,10 @@
                                 android:id="@+id/wednesday_course_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_2_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_2_text_color"
                                 android:layout_marginTop="30dp"
                                 android:visibility="gone"/>
 
@@ -631,10 +631,10 @@
                                 android:id="@+id/wednesday_course_3"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_3_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_3_text_color"
                                 android:layout_marginTop="75dp"
                                 android:visibility="gone"/>
 
@@ -642,10 +642,10 @@
                                 android:id="@+id/wednesday_course_4"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_4_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_4_text_color"
                                 android:layout_marginTop="105dp"
                                 android:visibility="gone"/>
 
@@ -653,10 +653,10 @@
                                 android:id="@+id/wednesday_course_5"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_5_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_5_text_color"
                                 android:layout_marginTop="135dp"
                                 android:visibility="gone"/>
 
@@ -664,10 +664,10 @@
                                 android:id="@+id/wednesday_course_6"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_6_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_6_text_color"
                                 android:layout_marginTop="165dp"
                                 android:visibility="gone"/>
 
@@ -675,10 +675,10 @@
                                 android:id="@+id/wednesday_course_7"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_7_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_7_text_color"
                                 android:layout_marginTop="195dp"
                                 android:visibility="gone"/>
 
@@ -686,10 +686,10 @@
                                 android:id="@+id/wednesday_course_8"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_8_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_8_text_color"
                                 android:layout_marginTop="225dp"
                                 android:visibility="gone"/>
 
@@ -697,10 +697,10 @@
                                 android:id="@+id/wednesday_course_9"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_9_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_9_text_color"
                                 android:layout_marginTop="255dp"
                                 android:visibility="gone"/>
 
@@ -708,10 +708,10 @@
                                 android:id="@+id/wednesday_course_10"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_10_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_10_text_color"
                                 android:layout_marginTop="285dp"
                                 android:visibility="gone"/>
                         </RelativeLayout>
@@ -731,10 +731,10 @@
                                 android:id="@+id/thursday_course_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_1_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_1_text_color"
                                 android:layout_marginTop="0dp"
                                 android:visibility="gone"/>
 
@@ -742,10 +742,10 @@
                                 android:id="@+id/thursday_course_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_2_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_2_text_color"
                                 android:layout_marginTop="30dp"
                                 android:visibility="gone"/>
 
@@ -753,10 +753,10 @@
                                 android:id="@+id/thursday_course_3"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_3_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_3_text_color"
                                 android:layout_marginTop="75dp"
                                 android:visibility="gone"/>
 
@@ -764,10 +764,10 @@
                                 android:id="@+id/thursday_course_4"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_4_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_4_text_color"
                                 android:layout_marginTop="105dp"
                                 android:visibility="gone"/>
 
@@ -775,10 +775,10 @@
                                 android:id="@+id/thursday_course_5"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_5_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_5_text_color"
                                 android:layout_marginTop="135dp"
                                 android:visibility="gone"/>
 
@@ -786,10 +786,10 @@
                                 android:id="@+id/thursday_course_6"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_6_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_6_text_color"
                                 android:layout_marginTop="165dp"
                                 android:visibility="gone"/>
 
@@ -797,10 +797,10 @@
                                 android:id="@+id/thursday_course_7"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_7_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_7_text_color"
                                 android:layout_marginTop="195dp"
                                 android:visibility="gone"/>
 
@@ -808,10 +808,10 @@
                                 android:id="@+id/thursday_course_8"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_8_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_8_text_color"
                                 android:layout_marginTop="225dp"
                                 android:visibility="gone"/>
 
@@ -819,10 +819,10 @@
                                 android:id="@+id/thursday_course_9"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_9_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_9_text_color"
                                 android:layout_marginTop="255dp"
                                 android:visibility="gone"/>
 
@@ -830,10 +830,10 @@
                                 android:id="@+id/thursday_course_10"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_10_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_10_text_color"
                                 android:layout_marginTop="285dp"
                                 android:visibility="gone"/>
                         </RelativeLayout>
@@ -853,10 +853,10 @@
                                 android:id="@+id/friday_course_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_1_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_1_text_color"
                                 android:layout_marginTop="0dp"
                                 android:visibility="gone"/>
 
@@ -864,10 +864,10 @@
                                 android:id="@+id/friday_course_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_2_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_2_text_color"
                                 android:layout_marginTop="30dp"
                                 android:visibility="gone"/>
 
@@ -875,10 +875,10 @@
                                 android:id="@+id/friday_course_3"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_3_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_3_text_color"
                                 android:layout_marginTop="75dp"
                                 android:visibility="gone"/>
 
@@ -886,10 +886,10 @@
                                 android:id="@+id/friday_course_4"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_4_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_4_text_color"
                                 android:layout_marginTop="105dp"
                                 android:visibility="gone"/>
 
@@ -897,10 +897,10 @@
                                 android:id="@+id/friday_course_5"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_5_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_5_text_color"
                                 android:layout_marginTop="135dp"
                                 android:visibility="gone"/>
 
@@ -908,10 +908,10 @@
                                 android:id="@+id/friday_course_6"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_6_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_6_text_color"
                                 android:layout_marginTop="165dp"
                                 android:visibility="gone"/>
 
@@ -919,10 +919,10 @@
                                 android:id="@+id/friday_course_7"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_7_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_7_text_color"
                                 android:layout_marginTop="195dp"
                                 android:visibility="gone"/>
 
@@ -930,10 +930,10 @@
                                 android:id="@+id/friday_course_8"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_8_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_8_text_color"
                                 android:layout_marginTop="225dp"
                                 android:visibility="gone"/>
 
@@ -941,10 +941,10 @@
                                 android:id="@+id/friday_course_9"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_9_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_9_text_color"
                                 android:layout_marginTop="255dp"
                                 android:visibility="gone"/>
 
@@ -952,10 +952,10 @@
                                 android:id="@+id/friday_course_10"
                                 android:layout_width="match_parent"
                                 android:layout_height="25dp"
-                                android:background="#130734"
+                                android:background="@color/course_10_background_color"
                                 android:text="Short Name"
-                                android:textSize="10dp"
-                                android:textColor="#ffffff"
+                                android:textSize="10sp"
+                                android:textColor="@color/course_10_text_color"
                                 android:layout_marginTop="285dp"
                                 android:visibility="gone"/>
 

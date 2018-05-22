@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="course_1_background_color">#000000</color>
+    <color name="course_2_background_color">#000000</color>
+    <color name="course_3_background_color">#000000</color>
+    <color name="course_4_background_color">#000000</color>
+    <color name="course_5_background_color">#000000</color>
+    <color name="course_6_background_color">#000000</color>
+    <color name="course_7_background_color">#000000</color>
+    <color name="course_8_background_color">#000000</color>
+    <color name="course_9_background_color">#000000</color>
+    <color name="course_10_background_color">#000000</color>
+
+    <color name="course_1_text_color">#FFCF00</color>
+    <color name="course_2_text_color">#FFCF00</color>
+    <color name="course_3_text_color">#FFCF00</color>
+    <color name="course_4_text_color">#FFCF00</color>
+    <color name="course_5_text_color">#FFCF00</color>
+    <color name="course_6_text_color">#FFCF00</color>
+    <color name="course_7_text_color">#FFCF00</color>
+    <color name="course_8_text_color">#FFCF00</color>
+    <color name="course_9_text_color">#FFCF00</color>
+    <color name="course_10_text_color">#FFCF00</color>
 </resources>
