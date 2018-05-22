@@ -24,7 +24,7 @@ public class Course {
 
 
     //These are for the table in CourseListFragment
-    private String positionInTable= ""; //Top location of course box
+    private int positionInTable= 0; //Top location of course box
     private int heightInTable= 0; //height of course box
     private static int courseColor= 130734;
     private static int textColor= 130734;
@@ -132,7 +132,7 @@ public class Course {
     }
 
 
-    public String getPositionInTable() {
+    public int getPositionInTable() {
         return positionInTable;
     }
 
@@ -214,8 +214,8 @@ public class Course {
         timeEnd=60*hourEnd + Integer.parseInt(minuteEndString);
 
 
-        positionInTable=Integer.toString(position);
-        heightInTable=timeEnd-timeStart;
+        positionInTable=position;
+        heightInTable=(timeEnd-timeStart)/2;
 
         int color= new Random().nextInt();       //Assign random color to course
         courseColor= color;
