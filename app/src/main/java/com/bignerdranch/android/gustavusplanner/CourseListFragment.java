@@ -87,8 +87,6 @@ public class CourseListFragment extends Fragment {
     private Button mFridayCourse9;
     private Button mFridayCourse10;
 
-    private static int CourseCount= 0;
-
 
     private static final String EXTRA_SCHEDULE_ID = "com.bignerdranch.android.gustavusplanner.schedule_id";
 
@@ -165,7 +163,6 @@ public class CourseListFragment extends Fragment {
         mFridayCourse9= (Button) view.findViewById(R.id.friday_course_9);
         mFridayCourse10= (Button) view.findViewById(R.id.friday_course_10);
 
-
         updateUI();
 
         return view;
@@ -230,7 +227,6 @@ public class CourseListFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        CourseCount= 0;
         updateUI();
     }
 
@@ -238,37 +234,61 @@ public class CourseListFragment extends Fragment {
         CourseLab courseLab = CourseLab.get(getActivity());
         List<Course> courses = courseLab.getCourses();
 
-        if (mAdapter == null) {
-            mAdapter = new CourseAdapter(courses);
-            mCourseRecyclerView.setAdapter(mAdapter);
-        } else {
-            mAdapter.setCourses(courses);
-            mAdapter.notifyDataSetChanged();
-        }
-    }
+        int CourseCount=0;
 
-    private class CourseHolder extends RecyclerView.ViewHolder
-        implements View.OnClickListener {
+        mMondayCourse1.setVisibility(View.GONE); //Refresh Schedule Table
+        mTuesdayCourse1.setVisibility(View.GONE);
+        mWednesdayCourse1.setVisibility(View.GONE);
+        mThursdayCourse1.setVisibility(View.GONE);
+        mFridayCourse1.setVisibility(View.GONE);
+        mMondayCourse2.setVisibility(View.GONE);
+        mTuesdayCourse2.setVisibility(View.GONE);
+        mWednesdayCourse2.setVisibility(View.GONE);
+        mThursdayCourse2.setVisibility(View.GONE);
+        mFridayCourse2.setVisibility(View.GONE);
+        mMondayCourse3.setVisibility(View.GONE);
+        mTuesdayCourse3.setVisibility(View.GONE);
+        mWednesdayCourse3.setVisibility(View.GONE);
+        mThursdayCourse3.setVisibility(View.GONE);
+        mFridayCourse3.setVisibility(View.GONE);
+        mMondayCourse4.setVisibility(View.GONE);
+        mTuesdayCourse4.setVisibility(View.GONE);
+        mWednesdayCourse4.setVisibility(View.GONE);
+        mThursdayCourse4.setVisibility(View.GONE);
+        mFridayCourse4.setVisibility(View.GONE);
+        mMondayCourse5.setVisibility(View.GONE);
+        mTuesdayCourse5.setVisibility(View.GONE);
+        mWednesdayCourse5.setVisibility(View.GONE);
+        mThursdayCourse5.setVisibility(View.GONE);
+        mFridayCourse5.setVisibility(View.GONE);
+        mMondayCourse6.setVisibility(View.GONE);
+        mTuesdayCourse6.setVisibility(View.GONE);
+        mWednesdayCourse6.setVisibility(View.GONE);
+        mThursdayCourse6.setVisibility(View.GONE);
+        mFridayCourse6.setVisibility(View.GONE);
+        mMondayCourse7.setVisibility(View.GONE);
+        mTuesdayCourse7.setVisibility(View.GONE);
+        mWednesdayCourse7.setVisibility(View.GONE);
+        mThursdayCourse7.setVisibility(View.GONE);
+        mFridayCourse7.setVisibility(View.GONE);
+        mMondayCourse8.setVisibility(View.GONE);
+        mTuesdayCourse8.setVisibility(View.GONE);
+        mWednesdayCourse8.setVisibility(View.GONE);
+        mThursdayCourse8.setVisibility(View.GONE);
+        mFridayCourse8.setVisibility(View.GONE);
+        mMondayCourse9.setVisibility(View.GONE);
+        mTuesdayCourse9.setVisibility(View.GONE);
+        mWednesdayCourse9.setVisibility(View.GONE);
+        mThursdayCourse9.setVisibility(View.GONE);
+        mFridayCourse9.setVisibility(View.GONE);
+        mMondayCourse10.setVisibility(View.GONE);
+        mTuesdayCourse10.setVisibility(View.GONE);
+        mWednesdayCourse10.setVisibility(View.GONE);
+        mThursdayCourse10.setVisibility(View.GONE);
+        mFridayCourse10.setVisibility(View.GONE);
 
-        private Course mCourse;
-        public CourseHolder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.list_item_course, parent, false));
-            itemView.setOnClickListener(this);
-
-            mCourseShortTitleTextView = (TextView) itemView.findViewById(R.id.course_list_item_short_title);
-            mCourseStartTimeTextView = (TextView) itemView.findViewById(R.id.course_list_item_start_time);
-            mCourseNameTextView = (TextView) itemView.findViewById(R.id.course_list_item_name);
-            mCourseEndTimeTextView = (TextView) itemView.findViewById(R.id.course_list_item_end_time);
-
-        }
-
-        public void bind (Course course) {
-            mCourse = course;
-            mCourseShortTitleTextView.setText(mCourse.getShortTitle());
-            mCourseStartTimeTextView.setText(mCourse.getStartTime());
-            mCourseNameTextView.setText(mCourse.getName());
-            mCourseEndTimeTextView.setText(mCourse.getEndTime());
-
+        for(int c=0; c<courses.size() && c<10; c++) {
+            Course course=courses.get(c);
 
             course.calculateTableBox();
 
@@ -619,7 +639,38 @@ public class CourseListFragment extends Fragment {
                     mFridayCourse10.setVisibility(View.VISIBLE);
                 }
             }
+        }
 
+        if (mAdapter == null) {
+            mAdapter = new CourseAdapter(courses);
+            mCourseRecyclerView.setAdapter(mAdapter);
+        } else {
+            mAdapter.setCourses(courses);
+            mAdapter.notifyDataSetChanged();
+        }
+    }
+
+    private class CourseHolder extends RecyclerView.ViewHolder
+        implements View.OnClickListener {
+
+        private Course mCourse;
+        public CourseHolder(LayoutInflater inflater, ViewGroup parent) {
+            super(inflater.inflate(R.layout.list_item_course, parent, false));
+            itemView.setOnClickListener(this);
+
+            mCourseShortTitleTextView = (TextView) itemView.findViewById(R.id.course_list_item_short_title);
+            mCourseStartTimeTextView = (TextView) itemView.findViewById(R.id.course_list_item_start_time);
+            mCourseNameTextView = (TextView) itemView.findViewById(R.id.course_list_item_name);
+            mCourseEndTimeTextView = (TextView) itemView.findViewById(R.id.course_list_item_end_time);
+
+        }
+
+        public void bind (Course course) {
+            mCourse = course;
+            mCourseShortTitleTextView.setText(mCourse.getShortTitle());
+            mCourseStartTimeTextView.setText(mCourse.getStartTime());
+            mCourseNameTextView.setText(mCourse.getName());
+            mCourseEndTimeTextView.setText(mCourse.getEndTime());
         }
 
         @Override
