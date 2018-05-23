@@ -173,7 +173,7 @@ public class Course {
 
         int i=0;
         while (StartTime.charAt(i) != ':') {
-            hourStartString=hourStartString+StartTime.charAt(0);
+            hourStartString=hourStartString+StartTime.charAt(i);
             i++;
         }
         i++;
@@ -183,19 +183,19 @@ public class Course {
         }
         AM_PM_Start=StartTime.charAt(i);
 
-        if(AM_PM_Start=='A' || hourStartString=="12") {
-            position=30*(Integer.parseInt(hourStartString) - 8) + (Integer.parseInt(minuteStartString)/2); // 8:00AM=0dp 9:00AM=30dp 10:00AM=60dp 11:AM=90dp 12:00PM=120dp
+        if((AM_PM_Start=='A' && Integer.valueOf(hourStartString)!=12) || (Integer.valueOf(hourStartString)==12 && AM_PM_Start!='A')) {
+            position=30*(Integer.valueOf(hourStartString) - 8) + (Integer.valueOf(minuteStartString)/2); // 8:00AM=0dp 9:00AM=30dp 10:00AM=60dp 11:AM=90dp 12:00PM=120dp
             hourStart= Integer.parseInt(hourStartString);
         }
         else {
-            position=30*(Integer.parseInt(hourStartString) + 4) + (Integer.parseInt(minuteStartString)/2); // 1:00PM=150dp 11:00PM=450dp
+            position=30*(Integer.valueOf(hourStartString) + 4) + (Integer.valueOf(minuteStartString)/2); // 1:00PM=150dp 11:00PM=450dp
             hourStart= Integer.parseInt(hourStartString) + 12;
         }
         timeStart=60*hourStart + Integer.parseInt(minuteStartString);
 
         i=0;
         while (EndTime.charAt(i) != ':') {
-            hourEndString=hourEndString+EndTime.charAt(0);
+            hourEndString=hourEndString+EndTime.charAt(i);
             i++;
         }
         i++;
@@ -205,7 +205,7 @@ public class Course {
         }
         AM_PM_End=EndTime.charAt(i);
 
-        if(AM_PM_End=='A' || hourEndString=="12") {
+        if((AM_PM_End=='A' && Integer.valueOf(hourEndString)!=12) || (Integer.valueOf(hourEndString)==12 && AM_PM_End!='A')) {
             hourEnd= Integer.parseInt(hourEndString);
         }
         else {
@@ -217,7 +217,7 @@ public class Course {
         positionInTable=position;
         heightInTable=(timeEnd-timeStart)/2;
 
-        int color= new Random().nextInt();       //Assign random color to course
+        /* int color= new Random().nextInt();       //Assign random color to course
         courseColor= color;
         String courseColorHex= Integer.toHexString(courseColor);
         color = (int)Long.parseLong(courseColorHex, 16);
@@ -229,7 +229,7 @@ public class Course {
         int invertedBlue = 255 - b;
 
         textColor = Color.rgb(invertedRed, invertedGreen, invertedBlue);
-                   //Assign inverted color to text
+                   //Assign inverted color to text */
     }
 
 }

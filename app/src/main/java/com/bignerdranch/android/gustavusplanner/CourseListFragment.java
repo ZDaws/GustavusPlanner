@@ -4,11 +4,13 @@ import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,6 +18,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -316,37 +320,57 @@ public class CourseListFragment extends Fragment {
                 }
             }
 
+            RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+
+            int pixelHeight= (int) TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, course.getHeightInTable(), getResources()
+                            .getDisplayMetrics());
+
+            int pixelPosition= (int) TypedValue.applyDimension(
+                    TypedValue.COMPLEX_UNIT_DIP, course.getPositionInTable(), getResources()
+                            .getDisplayMetrics());
+
+            int left= 0;
+            int top= pixelPosition;
+            int right= 0;
+            int bottom= 0;
+            layoutParams.setMargins(left, top, right, bottom);
+            //yourView.setLayoutParams(layoutParams);
+
             CourseCount++;
             if(CourseCount==1) {
                 if(M) {
                     mMondayCourse1.setText(course.getShortTitle());
                     //mMondayCourse1.setBackgroundColor(course.getCourseColor());
                     //mMondayCourse1.setTextColor(course.getTextColor());
-                    mMondayCourse1.setTop(course.getPositionInTable());
+                    mMondayCourse1.setLayoutParams(layoutParams);
                     mMondayCourse1.setHeight(course.getHeightInTable());
                     mMondayCourse1.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse1.setText(course.getShortTitle());
-                    mTuesdayCourse1.setTop(course.getPositionInTable());
+                    mTuesdayCourse1.setLayoutParams(layoutParams);
                     mTuesdayCourse1.setHeight(course.getHeightInTable());
                     mTuesdayCourse1.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse1.setText(course.getShortTitle());
-                    mWednesdayCourse1.setTop(course.getPositionInTable());
+                    mWednesdayCourse1.setLayoutParams(layoutParams);
                     mWednesdayCourse1.setHeight(course.getHeightInTable());
                     mWednesdayCourse1.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse1.setText(course.getShortTitle());
-                    mThursdayCourse1.setTop(course.getPositionInTable());
+                    mThursdayCourse1.setLayoutParams(layoutParams);
                     mThursdayCourse1.setHeight(course.getHeightInTable());
                     mThursdayCourse1.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse1.setText(course.getShortTitle());
-                    mFridayCourse1.setTop(course.getPositionInTable());
+                    mFridayCourse1.setLayoutParams(layoutParams);
                     mFridayCourse1.setHeight(course.getHeightInTable());
                     mFridayCourse1.setVisibility(View.VISIBLE);
                 }
@@ -354,31 +378,31 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==2) {
                 if(M) {
                     mMondayCourse2.setText(course.getShortTitle());
-                    mMondayCourse2.setTop(course.getPositionInTable());
+                    mMondayCourse2.setLayoutParams(layoutParams);
                     mMondayCourse2.setHeight(course.getHeightInTable());
                     mMondayCourse2.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse2.setText(course.getShortTitle());
-                    mTuesdayCourse2.setTop(course.getPositionInTable());
+                    mTuesdayCourse2.setLayoutParams(layoutParams);
                     mTuesdayCourse2.setHeight(course.getHeightInTable());
                     mTuesdayCourse2.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse2.setText(course.getShortTitle());
-                    mWednesdayCourse2.setTop(course.getPositionInTable());
+                    mWednesdayCourse2.setLayoutParams(layoutParams);
                     mWednesdayCourse2.setHeight(course.getHeightInTable());
                     mWednesdayCourse2.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse2.setText(course.getShortTitle());
-                    mThursdayCourse2.setTop(course.getPositionInTable());
+                    mThursdayCourse2.setLayoutParams(layoutParams);
                     mThursdayCourse2.setHeight(course.getHeightInTable());
                     mThursdayCourse2.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse2.setText(course.getShortTitle());
-                    mFridayCourse2.setTop(course.getPositionInTable());
+                    mFridayCourse2.setLayoutParams(layoutParams);
                     mFridayCourse2.setHeight(course.getHeightInTable());
                     mFridayCourse2.setVisibility(View.VISIBLE);
                 }
@@ -386,31 +410,31 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==3) {
                 if(M) {
                     mMondayCourse3.setText(course.getShortTitle());
-                    mMondayCourse3.setTop(course.getPositionInTable());
+                    mMondayCourse3.setLayoutParams(layoutParams);
                     mMondayCourse3.setHeight(course.getHeightInTable());
                     mMondayCourse3.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse3.setText(course.getShortTitle());
-                    mTuesdayCourse3.setTop(course.getPositionInTable());
+                    mTuesdayCourse3.setLayoutParams(layoutParams);
                     mTuesdayCourse3.setHeight(course.getHeightInTable());
                     mTuesdayCourse3.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse3.setText(course.getShortTitle());
-                    mWednesdayCourse3.setTop(course.getPositionInTable());
+                    mWednesdayCourse3.setLayoutParams(layoutParams);
                     mWednesdayCourse3.setHeight(course.getHeightInTable());
                     mWednesdayCourse3.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse3.setText(course.getShortTitle());
-                    mThursdayCourse3.setTop(course.getPositionInTable());
+                    mThursdayCourse3.setLayoutParams(layoutParams);
                     mThursdayCourse3.setHeight(course.getHeightInTable());
                     mThursdayCourse3.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse3.setText(course.getShortTitle());
-                    mFridayCourse3.setTop(course.getPositionInTable());
+                    mFridayCourse3.setLayoutParams(layoutParams);
                     mFridayCourse3.setHeight(course.getHeightInTable());
                     mFridayCourse3.setVisibility(View.VISIBLE);
                 }
@@ -418,31 +442,31 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==4) {
                 if(M) {
                     mMondayCourse4.setText(course.getShortTitle());
-                    mMondayCourse4.setTop(course.getPositionInTable());
+                    mMondayCourse4.setLayoutParams(layoutParams);
                     mMondayCourse4.setHeight(course.getHeightInTable());
                     mMondayCourse4.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse4.setText(course.getShortTitle());
-                    mTuesdayCourse4.setTop(course.getPositionInTable());
+                    mTuesdayCourse4.setLayoutParams(layoutParams);
                     mTuesdayCourse4.setHeight(course.getHeightInTable());
                     mTuesdayCourse4.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse4.setText(course.getShortTitle());
-                    mWednesdayCourse4.setTop(course.getPositionInTable());
+                    mWednesdayCourse4.setLayoutParams(layoutParams);
                     mWednesdayCourse4.setHeight(course.getHeightInTable());
                     mWednesdayCourse4.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse4.setText(course.getShortTitle());
-                    mThursdayCourse4.setTop(course.getPositionInTable());
+                    mThursdayCourse4.setLayoutParams(layoutParams);
                     mThursdayCourse4.setHeight(course.getHeightInTable());
                     mThursdayCourse4.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse4.setText(course.getShortTitle());
-                    mFridayCourse4.setTop(course.getPositionInTable());
+                    mFridayCourse4.setLayoutParams(layoutParams);
                     mFridayCourse4.setHeight(course.getHeightInTable());
                     mFridayCourse4.setVisibility(View.VISIBLE);
                 }
@@ -450,31 +474,31 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==5) {
                 if(M) {
                     mMondayCourse5.setText(course.getShortTitle());
-                    mMondayCourse5.setTop(course.getPositionInTable());
+                    mMondayCourse5.setLayoutParams(layoutParams);
                     mMondayCourse5.setHeight(course.getHeightInTable());
                     mMondayCourse5.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse5.setText(course.getShortTitle());
-                    mTuesdayCourse5.setTop(course.getPositionInTable());
+                    mTuesdayCourse5.setLayoutParams(layoutParams);
                     mTuesdayCourse5.setHeight(course.getHeightInTable());
                     mTuesdayCourse5.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse5.setText(course.getShortTitle());
-                    mWednesdayCourse5.setTop(course.getPositionInTable());
+                    mWednesdayCourse5.setLayoutParams(layoutParams);
                     mWednesdayCourse5.setHeight(course.getHeightInTable());
                     mWednesdayCourse5.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse5.setText(course.getShortTitle());
-                    mThursdayCourse5.setTop(course.getPositionInTable());
+                    mThursdayCourse5.setLayoutParams(layoutParams);
                     mThursdayCourse5.setHeight(course.getHeightInTable());
                     mThursdayCourse5.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse5.setText(course.getShortTitle());
-                    mFridayCourse5.setTop(course.getPositionInTable());
+                    mFridayCourse5.setLayoutParams(layoutParams);
                     mFridayCourse5.setHeight(course.getHeightInTable());
                     mFridayCourse5.setVisibility(View.VISIBLE);
                 }
@@ -482,31 +506,31 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==6) {
                 if(M) {
                     mMondayCourse6.setText(course.getShortTitle());
-                    mMondayCourse6.setTop(course.getPositionInTable());
+                    mMondayCourse6.setLayoutParams(layoutParams);
                     mMondayCourse6.setHeight(course.getHeightInTable());
                     mMondayCourse6.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse6.setText(course.getShortTitle());
-                    mTuesdayCourse6.setTop(course.getPositionInTable());
+                    mTuesdayCourse6.setLayoutParams(layoutParams);
                     mTuesdayCourse6.setHeight(course.getHeightInTable());
                     mTuesdayCourse6.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse6.setText(course.getShortTitle());
-                    mWednesdayCourse6.setTop(course.getPositionInTable());
+                    mWednesdayCourse6.setLayoutParams(layoutParams);
                     mWednesdayCourse6.setHeight(course.getHeightInTable());
                     mWednesdayCourse6.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse6.setText(course.getShortTitle());
-                    mThursdayCourse6.setTop(course.getPositionInTable());
+                    mThursdayCourse6.setLayoutParams(layoutParams);
                     mThursdayCourse6.setHeight(course.getHeightInTable());
                     mThursdayCourse6.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse6.setText(course.getShortTitle());
-                    mFridayCourse6.setTop(course.getPositionInTable());
+                    mFridayCourse6.setLayoutParams(layoutParams);
                     mFridayCourse6.setHeight(course.getHeightInTable());
                     mFridayCourse6.setVisibility(View.VISIBLE);
                 }
@@ -514,31 +538,31 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==7) {
                 if(M) {
                     mMondayCourse7.setText(course.getShortTitle());
-                    mMondayCourse7.setTop(course.getPositionInTable());
+                    mMondayCourse7.setLayoutParams(layoutParams);
                     mMondayCourse7.setHeight(course.getHeightInTable());
                     mMondayCourse7.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse7.setText(course.getShortTitle());
-                    mTuesdayCourse7.setTop(course.getPositionInTable());
+                    mTuesdayCourse7.setLayoutParams(layoutParams);
                     mTuesdayCourse7.setHeight(course.getHeightInTable());
                     mTuesdayCourse7.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse7.setText(course.getShortTitle());
-                    mWednesdayCourse7.setTop(course.getPositionInTable());
+                    mWednesdayCourse7.setLayoutParams(layoutParams);
                     mWednesdayCourse7.setHeight(course.getHeightInTable());
                     mWednesdayCourse7.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse7.setText(course.getShortTitle());
-                    mThursdayCourse7.setTop(course.getPositionInTable());
+                    mThursdayCourse7.setLayoutParams(layoutParams);
                     mThursdayCourse7.setHeight(course.getHeightInTable());
                     mThursdayCourse7.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse7.setText(course.getShortTitle());
-                    mFridayCourse7.setTop(course.getPositionInTable());
+                    mFridayCourse7.setLayoutParams(layoutParams);
                     mFridayCourse7.setHeight(course.getHeightInTable());
                     mFridayCourse7.setVisibility(View.VISIBLE);
                 }
@@ -546,31 +570,31 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==8) {
                 if(M) {
                     mMondayCourse8.setText(course.getShortTitle());
-                    mMondayCourse8.setTop(course.getPositionInTable());
+                    mMondayCourse8.setLayoutParams(layoutParams);
                     mMondayCourse8.setHeight(course.getHeightInTable());
                     mMondayCourse8.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse8.setText(course.getShortTitle());
-                    mTuesdayCourse8.setTop(course.getPositionInTable());
+                    mTuesdayCourse8.setLayoutParams(layoutParams);
                     mTuesdayCourse8.setHeight(course.getHeightInTable());
                     mTuesdayCourse8.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse8.setText(course.getShortTitle());
-                    mWednesdayCourse8.setTop(course.getPositionInTable());
+                    mWednesdayCourse8.setLayoutParams(layoutParams);
                     mWednesdayCourse8.setHeight(course.getHeightInTable());
                     mWednesdayCourse8.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse8.setText(course.getShortTitle());
-                    mThursdayCourse8.setTop(course.getPositionInTable());
+                    mThursdayCourse8.setLayoutParams(layoutParams);
                     mThursdayCourse8.setHeight(course.getHeightInTable());
                     mThursdayCourse8.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse8.setText(course.getShortTitle());
-                    mFridayCourse8.setTop(course.getPositionInTable());
+                    mFridayCourse8.setLayoutParams(layoutParams);
                     mFridayCourse8.setHeight(course.getHeightInTable());
                     mFridayCourse8.setVisibility(View.VISIBLE);
                 }
@@ -578,31 +602,31 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==9) {
                 if(M) {
                     mMondayCourse9.setText(course.getShortTitle());
-                    mMondayCourse9.setTop(course.getPositionInTable());
+                    mMondayCourse9.setLayoutParams(layoutParams);
                     mMondayCourse9.setHeight(course.getHeightInTable());
                     mMondayCourse9.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse9.setText(course.getShortTitle());
-                    mTuesdayCourse9.setTop(course.getPositionInTable());
+                    mTuesdayCourse9.setLayoutParams(layoutParams);
                     mTuesdayCourse9.setHeight(course.getHeightInTable());
                     mTuesdayCourse9.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse9.setText(course.getShortTitle());
-                    mWednesdayCourse9.setTop(course.getPositionInTable());
+                    mWednesdayCourse9.setLayoutParams(layoutParams);
                     mWednesdayCourse9.setHeight(course.getHeightInTable());
                     mWednesdayCourse9.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse9.setText(course.getShortTitle());
-                    mThursdayCourse9.setTop(course.getPositionInTable());
+                    mThursdayCourse9.setLayoutParams(layoutParams);
                     mThursdayCourse9.setHeight(course.getHeightInTable());
                     mThursdayCourse9.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse9.setText(course.getShortTitle());
-                    mFridayCourse9.setTop(course.getPositionInTable());
+                    mFridayCourse9.setLayoutParams(layoutParams);
                     mFridayCourse9.setHeight(course.getHeightInTable());
                     mFridayCourse9.setVisibility(View.VISIBLE);
                 }
@@ -610,31 +634,31 @@ public class CourseListFragment extends Fragment {
             else if(CourseCount==10) {
                 if(M) {
                     mMondayCourse10.setText(course.getShortTitle());
-                    mMondayCourse10.setTop(course.getPositionInTable());
+                    mMondayCourse10.setLayoutParams(layoutParams);
                     mMondayCourse10.setHeight(course.getHeightInTable());
                     mMondayCourse10.setVisibility(View.VISIBLE);
                 }
                 if(T) {
                     mTuesdayCourse10.setText(course.getShortTitle());
-                    mTuesdayCourse10.setTop(course.getPositionInTable());
+                    mTuesdayCourse10.setLayoutParams(layoutParams);
                     mTuesdayCourse10.setHeight(course.getHeightInTable());
                     mTuesdayCourse10.setVisibility(View.VISIBLE);
                 }
                 if(W) {
                     mWednesdayCourse10.setText(course.getShortTitle());
-                    mWednesdayCourse10.setTop(course.getPositionInTable());
+                    mWednesdayCourse10.setLayoutParams(layoutParams);
                     mWednesdayCourse10.setHeight(course.getHeightInTable());
                     mWednesdayCourse10.setVisibility(View.VISIBLE);
                 }
                 if(R) {
                     mThursdayCourse10.setText(course.getShortTitle());
-                    mThursdayCourse10.setTop(course.getPositionInTable());
+                    mThursdayCourse10.setLayoutParams(layoutParams);
                     mThursdayCourse10.setHeight(course.getHeightInTable());
                     mThursdayCourse10.setVisibility(View.VISIBLE);
                 }
                 if(F) {
                     mFridayCourse10.setText(course.getShortTitle());
-                    mFridayCourse10.setTop(course.getPositionInTable());
+                    mFridayCourse10.setLayoutParams(layoutParams);
                     mFridayCourse10.setHeight(course.getHeightInTable());
                     mFridayCourse10.setVisibility(View.VISIBLE);
                 }
