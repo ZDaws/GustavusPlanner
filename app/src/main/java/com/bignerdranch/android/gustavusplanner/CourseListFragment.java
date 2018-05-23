@@ -333,13 +333,9 @@ public class CourseListFragment extends Fragment {
                     TypedValue.COMPLEX_UNIT_DIP, course.getPositionInTable(), getResources()
                             .getDisplayMetrics());
 
-            int left= 0;
             int top= pixelPosition;
-            int right= 0;
-            int bottom= 0;
-            layoutParams.setMargins(left, top, right, bottom);
+            layoutParams.setMargins(0, top, 0, 0);
             layoutParams.height = pixelHeight;
-            //yourView.setLayoutParams(layoutParams);
 
             CourseCount++;
             if(CourseCount==1) {
