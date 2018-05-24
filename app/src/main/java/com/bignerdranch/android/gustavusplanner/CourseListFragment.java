@@ -4,7 +4,6 @@ import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -18,7 +17,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -91,6 +89,8 @@ public class CourseListFragment extends Fragment {
     private Button mFridayCourse9;
     private Button mFridayCourse10;
 
+    private UUID scheduleId;
+
 
     private static final String EXTRA_SCHEDULE_ID = "com.bignerdranch.android.gustavusplanner.schedule_id";
 
@@ -98,13 +98,13 @@ public class CourseListFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        UUID scheduleId = (UUID) getActivity().getIntent()
+        scheduleId = (UUID) getActivity().getIntent()
                 .getSerializableExtra(CourseListActivity.EXTRA_SCHEDULE_ID);
         mSchedule = ScheduleLab.get(getActivity()).getSchedule(scheduleId);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_course_list, container, false);
 
@@ -168,6 +168,311 @@ public class CourseListFragment extends Fragment {
         mFridayCourse10= (Button) view.findViewById(R.id.friday_course_10);
 
         updateUI();
+
+        mMondayCourse1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(0).itemView.performClick();
+            }
+        });
+        mMondayCourse2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(1).itemView.performClick();
+            }
+        });
+        mMondayCourse3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(2).itemView.performClick();
+            }
+        });
+        mMondayCourse4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(3).itemView.performClick();
+            }
+        });
+        mMondayCourse5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(4).itemView.performClick();
+            }
+        });
+        mMondayCourse6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(5).itemView.performClick();
+            }
+        });
+        mMondayCourse7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(6).itemView.performClick();
+            }
+        });
+        mMondayCourse8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(7).itemView.performClick();
+            }
+        });
+        mMondayCourse9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(8).itemView.performClick();
+            }
+        });
+        mMondayCourse10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(9).itemView.performClick();
+            }
+        });
+
+        mTuesdayCourse1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(0).itemView.performClick();
+            }
+        });
+        mTuesdayCourse2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(1).itemView.performClick();
+            }
+        });
+        mTuesdayCourse3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(2).itemView.performClick();
+            }
+        });
+        mTuesdayCourse4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(3).itemView.performClick();
+            }
+        });
+        mTuesdayCourse5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(4).itemView.performClick();
+            }
+        });
+        mTuesdayCourse6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(5).itemView.performClick();
+            }
+        });
+        mTuesdayCourse7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(6).itemView.performClick();
+            }
+        });
+        mTuesdayCourse8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(7).itemView.performClick();
+            }
+        });
+        mTuesdayCourse9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(8).itemView.performClick();
+            }
+        });
+        mTuesdayCourse10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(9).itemView.performClick();
+            }
+        });
+
+        mWednesdayCourse1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(0).itemView.performClick();
+            }
+        });
+        mWednesdayCourse2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(1).itemView.performClick();
+            }
+        });
+        mWednesdayCourse3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(2).itemView.performClick();
+            }
+        });
+        mWednesdayCourse4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(3).itemView.performClick();
+            }
+        });
+        mWednesdayCourse5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(4).itemView.performClick();
+            }
+        });
+        mWednesdayCourse6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(5).itemView.performClick();
+            }
+        });
+        mWednesdayCourse7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(6).itemView.performClick();
+            }
+        });
+        mWednesdayCourse8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(7).itemView.performClick();
+            }
+        });
+        mWednesdayCourse9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(8).itemView.performClick();
+            }
+        });
+        mWednesdayCourse10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(9).itemView.performClick();
+            }
+        });
+
+        mThursdayCourse1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(0).itemView.performClick();
+            }
+        });
+        mThursdayCourse2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(1).itemView.performClick();
+            }
+        });
+        mThursdayCourse3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(2).itemView.performClick();
+            }
+        });
+        mThursdayCourse4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(3).itemView.performClick();
+            }
+        });
+        mThursdayCourse5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(4).itemView.performClick();
+            }
+        });
+        mThursdayCourse6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(5).itemView.performClick();
+            }
+        });
+        mThursdayCourse7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(6).itemView.performClick();
+            }
+        });
+        mThursdayCourse8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(7).itemView.performClick();
+            }
+        });
+        mThursdayCourse9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(8).itemView.performClick();
+            }
+        });
+        mThursdayCourse10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(9).itemView.performClick();
+            }
+        });
+
+        mFridayCourse1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(0).itemView.performClick();
+            }
+        });
+        mFridayCourse2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(1).itemView.performClick();
+            }
+        });
+        mFridayCourse3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(2).itemView.performClick();
+            }
+        });
+        mFridayCourse4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(3).itemView.performClick();
+            }
+        });
+        mFridayCourse5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(4).itemView.performClick();
+            }
+        });
+        mFridayCourse6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(5).itemView.performClick();
+            }
+        });
+        mFridayCourse7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(6).itemView.performClick();
+            }
+        });
+        mFridayCourse8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(7).itemView.performClick();
+            }
+        });
+        mFridayCourse9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(8).itemView.performClick();
+            }
+        });
+        mFridayCourse10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mCourseRecyclerView.findViewHolderForAdapterPosition(9).itemView.performClick();
+            }
+        });
 
         return view;
     }
@@ -343,7 +648,6 @@ public class CourseListFragment extends Fragment {
                     //mMondayCourse1.setBackgroundColor(course.getCourseColor());
                     //mMondayCourse1.setTextColor(course.getTextColor());
                     mMondayCourse1.setLayoutParams(layoutParams);
-                    //mMondayCourse1.setLayoutParams(new LinearLayout.LayoutParams(10, pixelHeight));
                     mMondayCourse1.setVisibility(View.VISIBLE);
                 }
                 if(T) {
