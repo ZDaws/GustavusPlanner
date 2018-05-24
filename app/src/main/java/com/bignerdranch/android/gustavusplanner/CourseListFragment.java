@@ -639,7 +639,8 @@ public class CourseListFragment extends Fragment {
                             .getDisplayMetrics());
 
             layoutParams.setMargins(0, pixelPosition, 0, 0);
-            layoutParams.height = pixelHeight;
+            layoutParams.height= pixelHeight;
+            layoutParams.width= 130734;
 
             CourseCount++;
             if(CourseCount==1) {

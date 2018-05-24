@@ -65,7 +65,6 @@
                 android:gravity="center"
                 android:text="Fri"
                 android:textColor="#000" />
-
         </LinearLayout>
     </RelativeLayout>
 
@@ -182,6 +181,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="465dp"
+                android:background="#777" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="495dp"
                 android:background="#777" />
 
             <LinearLayout
