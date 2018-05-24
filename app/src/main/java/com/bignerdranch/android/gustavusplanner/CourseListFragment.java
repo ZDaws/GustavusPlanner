@@ -333,8 +333,7 @@ public class CourseListFragment extends Fragment {
                     TypedValue.COMPLEX_UNIT_DIP, course.getPositionInTable(), getResources()
                             .getDisplayMetrics());
 
-            int top= pixelPosition;
-            layoutParams.setMargins(0, top, 0, 0);
+            layoutParams.setMargins(0, pixelPosition, 0, 0);
             layoutParams.height = pixelHeight;
 
             CourseCount++;
@@ -662,13 +661,13 @@ public class CourseListFragment extends Fragment {
             }
         }
 
-        if (mAdapter == null) {
+        //if (mAdapter == null) {                                      //Refresh RecyclerView
             mAdapter = new CourseAdapter(courses);
             mCourseRecyclerView.setAdapter(mAdapter);
-        } else {
+        /* } else {
             mAdapter.setCourses(courses);
             mAdapter.notifyDataSetChanged();
-        }
+        } */
     }
 
     private class CourseHolder extends RecyclerView.ViewHolder
