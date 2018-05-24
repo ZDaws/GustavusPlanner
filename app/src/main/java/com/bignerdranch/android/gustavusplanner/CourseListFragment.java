@@ -1,8 +1,10 @@
 package com.bignerdranch.android.gustavusplanner;
 
+import android.app.AlertDialog;
 import android.app.SearchManager;
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,6 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -32,6 +35,8 @@ public class CourseListFragment extends Fragment {
     private TextView mCourseStartTimeTextView;
     private TextView mCourseNameTextView;
     private TextView mCourseEndTimeTextView;
+
+    private CourseLab courseLab;
 
 
     private Button mMondayCourse1;
@@ -522,6 +527,14 @@ public class CourseListFragment extends Fragment {
             case R.id.action_delete:
                 ScheduleLab.get(getContext()).deleteSchedule(mSchedule);
                 getActivity().finish();
+            /* case R.id.add_course:
+                Course BlankCourse = new Course("", "", "", "", "", "", "", "");
+                CourseLab.get(getActivity()).addCourse(BlankCourse);
+                Intent intent = CourseActivity
+                        .newIntent(getActivity(), BlankCourse.getId(), scheduleId);
+                startActivity(intent);
+                CourseLab.get(getContext()).addCourse(BlankCourse);
+                return true; */
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -540,7 +553,7 @@ public class CourseListFragment extends Fragment {
     }
 
     private void updateUI() {
-        CourseLab courseLab = CourseLab.get(getActivity());
+        courseLab = CourseLab.get(getActivity());
         List<Course> courses = courseLab.getCourses();
 
         int CourseCount=0;
