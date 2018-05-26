@@ -12,13 +12,6 @@
         app:actionViewClass="android.support.v7.widget.SearchView" />
 
     <item
-        android:id="@+id/add_course"
-        android:title="Add"
-        android:icon="@drawable/ic_menu_add"
-        app:showAsAction="ifRoom|collapseActionView"
-        />
-
-    <item
         android:id="@+id/action_delete"
         android:title="Delete Schedule"
         android:icon="@drawable/ic_delete_white"

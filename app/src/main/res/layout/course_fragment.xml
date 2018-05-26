@@ -27,7 +27,7 @@
                     android:textSize="20sp"
                     android:text="@string/course_name"
                     />
-                <EditText
+                <TextView
                     android:id="@+id/course_name"
                     android:hint="Course Acronym"
                     android:layout_width="match_parent"
@@ -50,7 +50,7 @@
                     android:textSize="20sp"
                     android:text="@string/course_synonym"
                     />
-                <EditText
+                <TextView
                     android:id="@+id/course_synonym"
                     android:hint="Course Synonym"
                     android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                     android:textSize="20sp"
                     android:text="@string/course_short_title"
                     />
-                <EditText
+                <TextView
                     android:id="@+id/course_short_title"
                     android:hint="Course Name"
                     android:layout_width="match_parent"
@@ -96,7 +96,7 @@
                     android:textSize="20sp"
                     android:text="@string/course_meeting_days"
                     />
-                <EditText
+                <TextView
                     android:id="@+id/course_meeting_days"
                     android:hint="M T W R F"
                     android:layout_width="match_parent"
@@ -119,7 +119,7 @@
                     android:textSize="20sp"
                     android:text="@string/course_start_time"
                     />
-                <EditText
+                <TextView
                     android:id="@+id/course_start_time"
                     android:hint="00:00AM"
                     android:layout_width="match_parent"
@@ -142,7 +142,7 @@
                     android:textSize="20sp"
                     android:text="@string/course_end_time"
                     />
-                <EditText
+                <TextView
                     android:id="@+id/course_end_time"
                     android:hint="00:00PM"
                     android:layout_width="match_parent"
@@ -165,7 +165,7 @@
                     android:textSize="20sp"
                     android:text="@string/course_faculty"
                     />
-                <EditText
+                <TextView
                     android:id="@+id/course_faculty"
                     android:hint="Professor"
                     android:layout_width="match_parent"
@@ -188,7 +188,7 @@
                     android:textSize="20sp"
                     android:text="@string/course_area_approvals"
                     />
-                <EditText
+                <TextView
                     android:id="@+id/course_area_approvals"
                     android:hint="Additional Approvals"
                     android:layout_width="match_parent"

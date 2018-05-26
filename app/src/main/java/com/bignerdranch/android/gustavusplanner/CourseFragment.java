@@ -12,7 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.UUID;
@@ -24,14 +24,14 @@ import java.util.UUID;
 public class CourseFragment extends Fragment {
 
     private Button AddCourseToSchedule;
-    private EditText courseName;
-    private EditText courseSynonym;
-    private EditText courseShortTitle;
-    private EditText courseMeetingDays;
-    private EditText courseStartTime;
-    private EditText courseEndTime;
-    private EditText courseFaculty;
-    private EditText courseAreaApprovals;
+    private TextView courseName;
+    private TextView courseSynonym;
+    private TextView courseShortTitle;
+    private TextView courseMeetingDays;
+    private TextView courseStartTime;
+    private TextView courseEndTime;
+    private TextView courseFaculty;
+    private TextView courseAreaApprovals;
 
 
     private Course mCourse;
@@ -73,7 +73,7 @@ public class CourseFragment extends Fragment {
 
         courseName = v.findViewById(R.id.course_name);
         courseName.setText(mCourse.getName());
-        courseName.addTextChangedListener(new TextWatcher() {
+        /* courseName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -90,11 +90,11 @@ public class CourseFragment extends Fragment {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        }); */
 
         courseSynonym = v.findViewById(R.id.course_synonym);
         courseSynonym.setText(mCourse.getSynonym());
-        courseSynonym.addTextChangedListener(new TextWatcher() {
+        /* courseSynonym.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -110,11 +110,11 @@ public class CourseFragment extends Fragment {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        }); */
 
         courseShortTitle = v.findViewById(R.id.course_short_title);
         courseShortTitle.setText(mCourse.getShortTitle());
-        courseShortTitle.addTextChangedListener(new TextWatcher() {
+        /* courseShortTitle.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -130,11 +130,11 @@ public class CourseFragment extends Fragment {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        }); */
 
         courseMeetingDays = v.findViewById(R.id.course_meeting_days);
         courseMeetingDays.setText(mCourse.getMeetingDays());
-        courseMeetingDays.addTextChangedListener(new TextWatcher() {
+        /* courseMeetingDays.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -150,11 +150,11 @@ public class CourseFragment extends Fragment {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        }); */
 
         courseStartTime = v.findViewById(R.id.course_start_time);
         courseStartTime.setText(mCourse.getStartTime());
-        courseStartTime.addTextChangedListener(new TextWatcher() {
+        /* courseStartTime.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -187,11 +187,11 @@ public class CourseFragment extends Fragment {
                                             CourseLab.get(getContext()).updateCourse(mCourse);
                 }
             }
-        });
+        }); */
 
         courseEndTime = v.findViewById(R.id.course_end_time);
         courseEndTime.setText(mCourse.getEndTime());
-        courseEndTime.addTextChangedListener(new TextWatcher() {
+        /* courseEndTime.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -224,11 +224,11 @@ public class CourseFragment extends Fragment {
                                             CourseLab.get(getContext()).updateCourse(mCourse);
                 }
             }
-        });
+        }); */
 
         courseFaculty = v.findViewById(R.id.course_faculty);
         courseFaculty.setText(mCourse.getFaculty());
-        courseFaculty.addTextChangedListener(new TextWatcher() {
+        /* courseFaculty.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -244,11 +244,11 @@ public class CourseFragment extends Fragment {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        }); */
 
         courseAreaApprovals = v.findViewById(R.id.course_area_approvals);
         courseAreaApprovals.setText(mCourse.getAreaApprovals());
-        courseAreaApprovals.addTextChangedListener(new TextWatcher() {
+        /* courseAreaApprovals.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -264,7 +264,7 @@ public class CourseFragment extends Fragment {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        }); */
 
         AddCourseToSchedule= (Button) v.findViewById(R.id.add_to_schedule);
         AddCourseToSchedule.setText("Confirm");
